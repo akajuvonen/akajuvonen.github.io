@@ -33,7 +33,7 @@ blog.
   - Antti Juvonen and Tuomo Sipola. *[Adaptive framework for network traffic classification using dimensionality reduction and clustering]*. Ultra Modern Telecommunications and Control Systems and Workshops (ICUMT), 2012 4th International Congress on, pp. 274–279, 2012.
   - Tuomo Sipola, Antti Juvonen and Joel Lehtonen. *[Anomaly detection from network logs using diffusion maps]*. Engineering Applications of Neural Net- works , IFIP Advances in Information and Communication Technology, Vol. 363, pp. 172–181, 2011.
 - Other
-  - TODO
+  - Antti Juvonen and Tuomo Sipola. *[Anomaly detection framework using rule extraction for efficient intrusion detection]*. arXiv:1410.7709 [cs.NI], Technical report, 2014.
 
 [dissertation]: https://jyx.jyu.fi/dspace/handle/123456789/44755
 [CAP Data Technologies]: https://www.capdatatechnologies.com
@@ -48,3 +48,4 @@ blog.
 [Combining conjunctive rule extraction with diffusion maps for network intrusion detection]: https://doi.org/10.1109/ISCC.2013.6754981
 [An efficient network log anomaly detection system using random projection dimensionality reduction]: https://doi.org/10.1109/NTMS.2014.6814006
 [Online anomaly detection using dimensionality reduction techniques for HTTP log analysis]: https://doi.org/10.1016/j.comnet.2015.07.019
+[Anomaly detection framework using rule extraction for efficient intrusion detection]: http://arxiv.org/abs/1410.7709
