@@ -22,7 +22,7 @@ blog.
 
 # Publications
 - PhD dissertation
-  - TODO [dissertation]
+  - *[Intrusion detection applications using knowledge discovery and data mining]*. Jyväskylä studies in computing 205. University of Jyväskylä, Finland. 2014.
 - Journal papers
   - Antti Juvonen, Tuomo Sipola, and Timo Hämäläinen. *[Online anomaly detection using dimensionality reduction techniques for HTTP log analysis]*. Computer Networks, Vol. 91, pp. 46-56, 2015.
   - Tuomo Sipola, Antti Juvonen and Joel Lehtonen. *Dimensionality reduction framework for detecting anomalies from network logs*. [Engineering Intelligent Systems] , Vol. 20, Iss. 1–2, pp. 87–97, 2012.
@@ -35,12 +35,12 @@ blog.
 - Other
   - Antti Juvonen and Tuomo Sipola. *[Anomaly detection framework using rule extraction for efficient intrusion detection]*. arXiv:1410.7709 [cs.NI], Technical report, 2014.
 
-[dissertation]: https://jyx.jyu.fi/dspace/handle/123456789/44755
 [CAP Data Technologies]: https://www.capdatatechnologies.com
 [GitHub]: https://github.com/akajuvonen
 [Twitter]: https://twitter.com/akajuvonen
 [LinkedIn]: https://linkedin.com/in/akajuvonen
 
+[Intrusion detection applications using knowledge discovery and data mining]: https://jyx.jyu.fi/dspace/handle/123456789/44755
 [Anomaly detection from network logs using diffusion maps]: https://doi.org/10.1007/978-3-642-23957-1_20
 [Engineering Intelligent Systems]: http://www.crlpublishing.co.uk/journal.asp?j=eis&s=Aims%20and%20Scope
 [Adaptive framework for network traffic classification using dimensionality reduction and clustering]: https://doi.org/10.1109/ICUMT.2012.6459678
