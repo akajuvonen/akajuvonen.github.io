@@ -31,7 +31,7 @@ blog.
   - Antti Juvonen and Tuomo Sipola. *[Combining conjunctive rule extraction with diffusion maps for network intrusion detection]*. The Eighteenth IEEE Symposium on Computers and Communications (ISCC 2013) ,  pp.  411–416, 2013.
   - Mikhail Zolotukhin, Timo Hämäläinen and Antti Juvonen. *Growing hierarchical self-organizing maps and statistical distribution models for online detecion of web attacks*. Web Information Systems and Technologies. [Lecture Notes in Business Information Processing] , Vol. 140, pp. 281–295, 2013.
   - Antti Juvonen and Tuomo Sipola. *[Adaptive framework for network traffic classification using dimensionality reduction and clustering]*. Ultra Modern Telecommunications and Control Systems and Workshops (ICUMT), 2012 4th International Congress on, pp. 274–279, 2012.
-  - Tuomo Sipola, Antti Juvonen and Joel Lehtonen. *[Anomaly detection from network logs using diffusion maps]*. Engineering Applications of Neural Net- works , IFIP Advances in Information and Communication Technology, Vol. 363, pp. 172–181, 2011.
+  - Tuomo Sipola, Antti Juvonen and Joel Lehtonen. *[Anomaly detection from network logs using diffusion maps]*. Engineering Applications of Neural Networks , IFIP Advances in Information and Communication Technology, Vol. 363, pp. 172–181, 2011.
 - Other
   - Antti Juvonen and Tuomo Sipola. *[Anomaly detection framework using rule extraction for efficient intrusion detection]*. arXiv:1410.7709 [cs.NI], Technical report, 2014.
 
