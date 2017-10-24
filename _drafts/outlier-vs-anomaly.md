@@ -1,10 +1,15 @@
 ---
 layout: post
-title:  "TODO"
+title:  "Outliers and Anomalies"
 ---
 
-What is an outlier (large/small values).
+Preface, mention that are often considered the same.
 
-Anomaly doesn't follow the same process.
+Outlier: Probability low but same process, distribution.
+Anomaly: Impossible value.
 
-Example with pic.
+Normal example case.
+
+Outlier example.
+
+Anomaly example.
