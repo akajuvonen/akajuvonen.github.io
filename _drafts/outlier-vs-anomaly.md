@@ -29,4 +29,16 @@ might otherwise seem similar to normal data.
 Ok, now that that's out of the way, let's move on to a toy example which will
 explain what I mean much better.
 
+# Example
+
+TODO.
+
+![Normal data][fig_normal]
+![Outliers][fig_outlier]
+![Anomaly][fig_anom]
+
 [1]: https://en.wikipedia.org/wiki/Anomaly_detection
+
+[fig_normal]: /assets/outlier_vs_anom_normal.png
+[fig_outlier]: /assets/outlier_vs_anom_outlier.png
+[fig_anom]: /assets/outlier_vs_anom_anom.png
