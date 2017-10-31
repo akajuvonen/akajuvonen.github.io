@@ -38,7 +38,7 @@ the figure below.
 ![Normal data][fig_normal]
 
 It's pretty easy to see that the working hours and salaries follow a very
-simple linear distribution. If you work 100 hours, you get 1000 credits.
+simple linear distribution. If you work 100 hours, you get 1,000 credits.
 
 Next, let's consider some outliers. There are some new data points in the
 next figure.
@@ -52,7 +52,7 @@ original data. In this case, most distance-based and density-based outlier
 detection algorithms will flag these points as outliers, as they should.
 
 Now we are getting to the interesting part. What is the Data Scientist works
-for 100 hours and gets paid 1500 credits instead of 1000?
+for 100 hours and gets paid 1,500 credits instead of 1,000?
 
 ![Anomaly][fig_anom]
 
