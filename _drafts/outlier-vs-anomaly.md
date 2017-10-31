@@ -12,7 +12,7 @@ as:
 Simply, we are trying to find something abnormal. But what is abnormal? How
 do we define it? Could abnormality mean different things in different
 situations? Personally, I like to differentiate outliers from anomalies.
-They are both similar in the sense that we often want to find the, either to
+They are both similar in the sense that we often want to find them, either to
 remove them from the data or to focus our attention to them specifically.
 I will explain why I think the difference matters, and how to detect them
 using different methodologies.
@@ -69,7 +69,7 @@ One interesting method is [autoencoder][2], which would learn the underlying
 function that created the data (assuming the anomaly is not included in the
 training set). Then, it calculates the error for each data point. Then
 outliers would be considered normal as they are created by the same linear
-function. But the anomaly gets a higher error. If this error is above a certain
+function, while the anomaly gets a higher error. If this error is above a certain
 threshold, an alert is created.
 
 # TL;DR
