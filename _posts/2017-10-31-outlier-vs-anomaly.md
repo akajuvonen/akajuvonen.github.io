@@ -82,6 +82,6 @@ difference matters.
 [1]: https://en.wikipedia.org/wiki/Anomaly_detection
 [2]: https://en.wikipedia.org/wiki/Autoencoder
 
-[fig_normal]: /assets/outlier_vs_anom_normal.png
-[fig_outlier]: /assets/outlier_vs_anom_outlier.png
-[fig_anom]: /assets/outlier_vs_anom_anom.png
+[fig_normal]: /assets/outlier_vs_anom/normal.png
+[fig_outlier]: /assets/outlier_vs_anom/outlier.png
+[fig_anom]: /assets/outlier_vs_anom/anom.png
