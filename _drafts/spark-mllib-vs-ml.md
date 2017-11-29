@@ -38,10 +38,19 @@ methods, such as *map* or *reduce*. Some examples of this:
 
 ```scala
 // Get the sum of elements
-parallelData.reduce((a, b) => a+b)
+parallelData.reduce((a, b) => a + b)
 // Add one to each element
 parallelData.map(a => a + 1)
 ```
+
+In short, working with RDDs requires some functional programming skills. It
+also leaves a lot of options to the programmer: *how* to implement something.
+It of course also means that poor implementation might have poor performance.
+
+By the way, did I mention that RDD API is in [maintenance mode][dfapi] since
+Spark 2.0? And that from Spark 3.0 it will be deprecated? Yeah, there is a new
+game in town. Let's take a look at the new API and what it means from a
+programming perspective.
 
 [spark]: https://spark.apache.org/
 [hadoop]: https://hadoop.apache.org/
