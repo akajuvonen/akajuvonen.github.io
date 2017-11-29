@@ -14,7 +14,8 @@ The interesting thing for Data Scientists is the fact that Spark has Machine
 Learning libraries built-in. But when I first started using Spark, I was
 confused. There seem to be two ML implementations. In addition, the naming
 conventions might be a bit confusing, as well. What are the different APis and
-which one should I choose? Let's take a brief look.
+which one should I choose? Let's take a brief look, focusing mostly on what
+all of this means for programmers.
 
 The older API is known as MLlib (more on naming a bit later), and it is
 based on RDDs, or [Resilient Distributed Datasets][rdd]. They are faul-tolerant
@@ -28,6 +29,18 @@ val data = Array(1, 2, 3)
     Note that sc is the SparkContext.
     Check Spark docs for initializing it.*/
 val parallelData = sc.parallelize(data)
+```
+
+Ok, easy enough. Now we are starting to get to the interesting part. How do we
+do something with these parallel data collections? If you want to perform
+transformations to the data, it's necessary to use many functional programming
+methods, such as *map* or *reduce*. Some examples of this:
+
+```scala
+// Get the sum of elements
+parallelData.reduce((a, b) => a+b)
+// Add one to each element
+parallelData.map(a => a + 1)
 ```
 
 [spark]: https://spark.apache.org/
