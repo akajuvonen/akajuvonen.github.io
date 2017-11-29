@@ -16,6 +16,11 @@ etc. For example, we might have an existing Hadoop cluster. Deploying Spark
 on top of that might speed up analytics dramatically, because Spark performs
 many operations in memory.
 
+The interesting thing for Data Scientists is the fact that Spark has Machine
+Learning libraries built-in. But when I first started using Spark, I was
+confused. There seem to be two ML implementations. What are they and which one
+should I choose? Let's take a brief look.
+
 [spark]: https://spark.apache.org/
 [hadoop]: https://hadoop.apache.org/
 [cassandra]: https://cassandra.apache.org/
