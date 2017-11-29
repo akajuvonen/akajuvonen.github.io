@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Spark Mllib vs SparkML"
+title:  "Machine Learning in Spark: Mllib vs SparkML"
 ---
 
 Outline:
