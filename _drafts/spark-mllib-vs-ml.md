@@ -17,6 +17,8 @@ conventions might be a bit confusing, as well. What are the different APIs and
 which one should I choose? Let's take a brief look, focusing mostly on what
 all of this means for programmers.
 
+# RDD API
+
 The older API is known as MLlib (more on naming a bit later), and it is
 based on RDDs, or [Resilient Distributed Datasets][rdd]. They are faul-tolerant
 and parallelized collections of elements. For example, we could create a RDD
@@ -52,6 +54,10 @@ Now would be a good time to mention that the RDD API is in
 [maintenance mode][dfapi] since Spark 2.0, and that from Spark 3.0 it will be deprecated. The old API will be useful at least until the new one catches up
 and reaches feature parity. Anyway, there is a new game in town. Let's take a
 look at the new API and what it means from a programming perspective.
+
+# Dataframe API
+
+TODO.
 
 [spark]: https://spark.apache.org/
 [hadoop]: https://hadoop.apache.org/
