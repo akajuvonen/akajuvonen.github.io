@@ -13,7 +13,7 @@ many operations in memory.
 The interesting thing for Data Scientists is the fact that Spark has Machine
 Learning libraries built-in. But when I first started using Spark, I was
 confused. There seem to be two ML implementations. In addition, the naming
-conventions might be a bit confusing, as well. What are the different APis and
+conventions might be a bit confusing, as well. What are the different APIs and
 which one should I choose? Let's take a brief look, focusing mostly on what
 all of this means for programmers.
 
