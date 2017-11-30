@@ -46,11 +46,12 @@ parallelData.map(a => a + 1)
 In short, working with RDDs requires some functional programming skills. It
 also leaves a lot of options to the programmer: *how* to implement something.
 It of course also means that poor implementation might have poor performance.
+In a way, the old API requires *imperative* style of programming.
 
-By the way, did I mention that RDD API is in [maintenance mode][dfapi] since
-Spark 2.0? And that from Spark 3.0 it will be deprecated? Yeah, there is a new
-game in town. Let's take a look at the new API and what it means from a
-programming perspective.
+Now would be a good time to mention that the RDD API is in
+[maintenance mode][dfapi] since Spark 2.0, and that from Spark 3.0 it will be deprecated. The old API will be useful at least until the new one catches up
+and reaches feature parity. Anyway, there is a new game in town. Let's take a
+look at the new API and what it means from a programming perspective.
 
 [spark]: https://spark.apache.org/
 [hadoop]: https://hadoop.apache.org/
