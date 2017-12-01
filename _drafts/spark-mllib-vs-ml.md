@@ -57,6 +57,13 @@ look at the new API and what it means from a programming perspective.
 
 # Dataframe API
 
+First, a few notes on naming conventions. This is to ease some confusion that
+might appear when finding information about different APIs. Officially, the new
+API is called SparkML Dataframe-based API. This is the name that I will be
+using, as well. However, many if not most people use MLlib when referring to the
+old RDD API, and SparkML or Spark ML when talking about the new one. This is
+not an official name, however.
+
 The [new API][dfapi] is based on [Dataframes][dataset] instead of RDDs, and it
 is now used as the primary API for Sparks machine learning capabilites.
 TODO: What is Dataset? Examples, implications for programmers. Pros, cons.
