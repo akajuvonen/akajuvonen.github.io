@@ -57,7 +57,9 @@ look at the new API and what it means from a programming perspective.
 
 # Dataframe API
 
-TODO.
+The [new API][dfapi] is based on [Dataframes][dataset] instead of RDDs, and it
+is now used as the primary API for Sparks machine learning capabilites.
+TODO: What is Dataset? Examples, implications for programmers. Pros, cons.
 
 [spark]: https://spark.apache.org/
 [hadoop]: https://hadoop.apache.org/
