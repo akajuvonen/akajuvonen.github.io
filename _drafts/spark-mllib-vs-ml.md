@@ -66,6 +66,9 @@ not an official name, however.
 
 The [new API][dfapi] is based on [Dataframes][dataset] instead of RDDs, and it
 is now used as the primary API for Sparks machine learning capabilites.
+A Dataset is a distributed data collection that aims to combine the benefits
+of RDDs and Spark SQL engine.
+
 TODO: What is Dataset? Examples, implications for programmers. Pros, cons.
 
 [spark]: https://spark.apache.org/
