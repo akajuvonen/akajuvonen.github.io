@@ -7,7 +7,7 @@ title:  "Machine Learning in Spark: RDD vs Dataframe API"
 data processing. It runs on a variety of platforms, including stand-alone and
 on [Hadoop][hadoop]. It can access data stored in HDFS, [Cassandra][cassandra]
 etc. For example, we might have an existing Hadoop cluster. Deploying Spark
-on top of that might speed up analytics dramatically, because Spark performs
+on top of that might speed up analytics dramatically because Spark performs
 many operations in memory.
 
 The interesting thing for Data Scientists is the fact that Spark has Machine
@@ -64,7 +64,7 @@ using, as well. However, many if not most people use MLlib when referring to the
 old RDD API, and SparkML or Spark ML when talking about the new one. This is
 not an official name, however.
 
-The [new API][dfapi] is based on [Dataframes][dataset] instead of RDDs, and it
+The [new API][dfapi] is based on [Dataframes][dataset] instead of RDDs, and
 is now used as the primary API for Sparks machine learning capabilites.
 A Dataset is a distributed data collection that aims to combine the benefits
 of RDDs and Spark SQL engine. In the context of machine learning, we are
@@ -93,11 +93,19 @@ df.show()
 
 DataFrames are also related to an important feature called
 [Pipelines][pipeline]. I'll write a separate blog post about that in more
-detail.
+detail. Anyway, in short, DataFrames are higher level than RDDs, and the optimizations happen under the hood.
 
 # The Main Point
 
-TODO.
+I mentioned earlier that RDDs require developers to think imperative (and
+functional). With the new API, this has changed, and a completely different
+programming paradigm is required. DataFrames resemble database tables, and
+Spark even uses an SQL engine in the background. SQL happens to be a
+*declarative* language, which means you specify *what* to do, not how.
+This means that even though we are still using Spark and its machine learning
+capabilities, the style of programming has completely changed. This
+demonstrates that it's always necessary to be versatile in the world of Data
+Science.
 
 [spark]: https://spark.apache.org/
 [hadoop]: https://hadoop.apache.org/
