@@ -91,6 +91,14 @@ df.filter($"age" > 18)
 df.show()
 ```
 
+DataFrames are also related to an important feature called
+[Pipelines][pipeline]. I'll write a separate blog post about that in more
+detail.
+
+# The Main Point
+
+TODO.
+
 [spark]: https://spark.apache.org/
 [hadoop]: https://hadoop.apache.org/
 [cassandra]: https://cassandra.apache.org/
@@ -99,3 +107,4 @@ df.show()
 [dfapi]: https://spark.apache.org/docs/latest/ml-guide.html
 [rddapi]: https://spark.apache.org/docs/latest/mllib-guide.html
 [scala]: https://www.scala-lang.org/
+[pipeline]: https://spark.apache.org/docs/latest/ml-pipeline.html
