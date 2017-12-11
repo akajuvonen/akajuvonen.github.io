@@ -9,6 +9,7 @@ Many more layers = deep learning. Now this problem arises.
 
 Example of vanishing gradient. Use sigmoid function as an example.
 This is why sigmoid is dead! Sigmoid derivative max 0.25.
+Mention chain rule.
 
 Maybe mention exploding gradient, as well?
 
