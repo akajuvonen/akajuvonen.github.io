@@ -14,3 +14,9 @@ Mention chain rule = in this case product of derivatives!
 Maybe mention exploding gradient, as well?
 
 How to combat this? Relu of some other activation function?
+
+![Sigmoid][fig_sigmoid]
+![Sigmoid derivative][fig_sigmoid_deriv]
+
+[fig_sigmoid]: /assets/vanishing-gradient/sigmoid.png
+[fig_sigmoid_deriv]: /assets/vanishing-gradient/sigmoid_deriv.png
