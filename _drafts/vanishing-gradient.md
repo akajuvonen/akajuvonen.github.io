@@ -13,6 +13,8 @@ Many more layers = deep learning. Now this problem arises.
 
 ![Example node][fig_node]
 
+![Example node][fig_nnet]
+
 # Example with sigmoid function
 
 Example of vanishing gradient. Use sigmoid function as an example.
@@ -33,3 +35,4 @@ How to combat this? Relu of some other activation function?
 [fig_sigmoid]: /assets/vanishing-gradient/sigmoid.png
 [fig_sigmoid_deriv]: /assets/vanishing-gradient/sigmoid_deriv.png
 [fig_node]: /assets/vanishing-gradient/node.png
+[fig_nnet]: /assets/vanishing-gradient/nnet.png
