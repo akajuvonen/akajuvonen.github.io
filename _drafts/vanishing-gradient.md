@@ -5,7 +5,7 @@ title:  "Vanishing Gradient Problem in Deep Neural Nets"
 
 Preface.
 
-# Some basics
+# Neural network basics
 
 Some neural network basics. Feed-forward. Backpropagation learning.
 
@@ -15,7 +15,7 @@ Many more layers = deep learning. Now this problem arises.
 
 ![Example node][fig_nnet]
 
-# Example with sigmoid function
+# Backpropagation and vanishing gradient
 
 Example of vanishing gradient. Use sigmoid function as an example.
 This is why sigmoid is dead! Sigmoid derivative max 0.25.
