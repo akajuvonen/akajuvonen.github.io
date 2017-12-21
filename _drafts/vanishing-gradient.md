@@ -3,7 +3,10 @@ layout: post
 title:  "Vanishing Gradient Problem in Deep Neural Nets"
 ---
 
-Preface.
+In this post we are going to take a look at a problem that became an issue
+with the rise of deep learning: the vanishing gradient. We need to know what it
+is to avoid rendering our deep neural network useless. But first, let's start
+with some background.
 
 # Neural network basics
 
