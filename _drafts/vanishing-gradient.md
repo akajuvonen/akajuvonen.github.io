@@ -50,6 +50,12 @@ to get smaller values for that function (if we move in the negative direction).
 This optimization gives us the *local minimum* of the loss function after some
 iterations.
 
+Calculating the gradient involves the use of derivative of the activation
+function. We can calculate the gradient for different layers of the network
+using the [chain rule][chainrule]. At this point it's enough to know that
+we are basically calculation a *product of derivatives*. We end up multiplying
+*n* gradients for *n* layers in the network.
+
 Gradient, derivative, chain rule (product of derivatives).
 
 Deriv of sigmoid below.
@@ -74,3 +80,4 @@ How to combat this? Relu of some other activation function?
 [cudnn]: https://developer.nvidia.com/cudnn
 [backprop]: https://en.wikipedia.org/wiki/Backpropagation
 [gradientdesc]: https://en.wikipedia.org/wiki/Gradient_descent
+[chainrule]: https://en.wikipedia.org/wiki/Chain_rule
