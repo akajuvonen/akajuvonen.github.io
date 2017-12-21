@@ -10,7 +10,7 @@ Preface.
 Let's start with some neural network basics. I'm not going to go into too much
 detail because there are already countless resources available.
 
-A neural network consists of *nodes*. They take input data multiplied by
+A neural network consists of *neurons* (or nodes). They take input data multiplied by
 weights and add these together. After this, the aggregated sum is input into
 an activation function, which determines the output of the node. Optimizing
 the weights is essentially what a neural network does when it's learning.
@@ -25,14 +25,12 @@ If we plot it, it looks like this:
 
 ![Sigmoid][fig_sigmoid]
 
-Nodes can be combined to form a neural network, which aims to approximate any
-arbitrary function. Each node in the network has its own inputs, outputs and
-activations. Below is an example of a simple feed-forward network. It has
-an *input layer*, *hidden layer* and *output layer*.
+Individual neurons can be combined to form a neural network, which aims to approximate any arbitrary function. Each node in the network has its own inputs, outputs and activations. Below is an example of a simple feed-forward network.
+It has an *input layer*, *hidden layer* and *output layer*.
 
 ![Example node][fig_nnet]
 
-It is also possible to have more connections or different number of nodes in
+It is also possible to have more connections or different number of neurons in
 each layer. Recently it has become possible to use more layers with more
 computing power and the use of [GPUs][cudnn]. This is often associated with
 *deep learning* or *deep neural networks*. But, with more layers a new problem
