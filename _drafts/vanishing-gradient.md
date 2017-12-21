@@ -56,17 +56,22 @@ using the [chain rule][chainrule]. At this point it's enough to know that
 we are basically calculation a *product of derivatives*. We end up multiplying
 *n* gradients for *n* layers in the network.
 
-Gradient, derivative, chain rule (product of derivatives).
-
-Deriv of sigmoid below.
+Now let's see what the derivative of the sigmoid function looks like:
 
 ![Sigmoid derivative][fig_sigmoid_deriv]
 
-Problem with many layers.
+Looks like it has the *maximum* value of 0.25, often being much smaller than
+that. Now imagine a deep neural network with many layers: what is going to
+happen? Enter the [vanishing gradient problem][vanishinggrad]. The gradient
+is always less than zero, so it keeps getting smaller and smaller exponentially
+layer by layer (or, it begins to vanish). This means that the *first layers
+train very slowly*. In practice, this means that our network becomes pretty
+much useless.
 
-Maybe mention exploding gradient, as well?
+It's also possible for the gradient to *increase* exponentially with very high
+gradient values. This is called *exploding gradient*.
 
-#  A possible solution
+#  What happens with a different activation function?
 
 How to combat this? Relu of some other activation function?
 
@@ -81,3 +86,4 @@ How to combat this? Relu of some other activation function?
 [backprop]: https://en.wikipedia.org/wiki/Backpropagation
 [gradientdesc]: https://en.wikipedia.org/wiki/Gradient_descent
 [chainrule]: https://en.wikipedia.org/wiki/Chain_rule
+[vanishinggrad]: https://en.wikipedia.org/wiki/Vanishing_gradient_problem
