@@ -7,11 +7,19 @@ Preface.
 
 # Neural network basics
 
-Some neural network basics. Feed-forward. Backpropagation learning.
+Let's start with some neural network basics. I'm not going to go into too much
+detail because there are already countless resources available.
 
-Many more layers = deep learning. Now this problem arises.
+A neural network consists of *nodes*. They take input data multiplied by
+weights and add these together. After this, the aggregated sum is input into
+an activation function, which determines the output of the node. Optimizing
+the weights is essentially what a neural network does when it's learning.
 
 ![Example node][fig_node]
+
+A commonly used activation function is the *sigmoid function*.
+
+![Sigmoid][fig_sigmoid]
 
 ![Example node][fig_nnet]
 
@@ -20,8 +28,8 @@ Many more layers = deep learning. Now this problem arises.
 Example of vanishing gradient. Use sigmoid function as an example.
 This is why sigmoid is dead! Sigmoid derivative max 0.25.
 Mention chain rule = in this case product of derivatives!
+Many more layers = deep learning. Now this problem arises.
 
-![Sigmoid][fig_sigmoid]
 
 ![Sigmoid derivative][fig_sigmoid_deriv]
 
