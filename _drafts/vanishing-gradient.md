@@ -25,7 +25,20 @@ If we plot it, it looks like this:
 
 ![Sigmoid][fig_sigmoid]
 
+Nodes can be combined to form a neural network, which aims to approximate any
+arbitrary function. Each node in the network has its own inputs, outputs and
+activations. Below is an example of a simple feed-forward network. It has
+an *input layer*, *hidden layer* and *output layer*.
+
 ![Example node][fig_nnet]
+
+It is also possible to have more connections or different number of nodes in
+each layer. Recently it has become possible to use more layers with more
+computing power and the use of [GPUs][cudnn]. This is often associated with
+*deep learning* or *deep neural networks*. But, with more layers a new problem
+arises. Let's take a look at that next. By the way, I know that this section
+did not go into too much detail about neural networks. Really, there is already
+a lot of information on those, so I'm keeping it **really** short.
 
 # Backpropagation and vanishing gradient
 
@@ -49,3 +62,5 @@ How to combat this? Relu of some other activation function?
 [fig_sigmoid_deriv]: /assets/vanishing-gradient/sigmoid_deriv.png
 [fig_node]: /assets/vanishing-gradient/node.png
 [fig_nnet]: /assets/vanishing-gradient/nnet.png
+
+[cudnn]: https://developer.nvidia.com/cudnn
