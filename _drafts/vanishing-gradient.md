@@ -40,7 +40,15 @@ a lot of information on those, so I'm keeping it **really** short.
 
 # Backpropagation and vanishing gradient
 
-Backpropagation learning.
+In practice, neural network learning is done by optimizing the weights.
+This can be performed by using [backpropagation][backprop]. We check error
+for each layer, and adjust the weights in the appropriate direction.
+This error is then propagated all the way back to the first layer. To do this
+in practice, [gradient descent][gradientdesc] algorithm is often used.
+We need to have a loss function. The gradient tells us which way we need to go
+to get smaller values for that function (if we move in the negative direction).
+This optimization gives us the *local minimum* of the loss function after some
+iterations.
 
 Gradient, derivative, chain rule (product of derivatives).
 
@@ -64,3 +72,5 @@ How to combat this? Relu of some other activation function?
 [fig_nnet]: /assets/vanishing-gradient/nnet.png
 
 [cudnn]: https://developer.nvidia.com/cudnn
+[backprop]: https://en.wikipedia.org/wiki/Backpropagation
+[gradientdesc]: https://en.wikipedia.org/wiki/Gradient_descent
