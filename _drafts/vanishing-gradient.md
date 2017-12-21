@@ -17,7 +17,11 @@ the weights is essentially what a neural network does when it's learning.
 
 ![Example node][fig_node]
 
-A commonly used activation function is the *sigmoid function*.
+A commonly used activation function is the *sigmoid function*:
+
+![Sigmoid function][fig_sigmoidfunc]
+
+If we plot it, it looks like this:
 
 ![Sigmoid][fig_sigmoid]
 
@@ -41,6 +45,7 @@ How to combat this? Relu of some other activation function?
 
 
 [fig_sigmoid]: /assets/vanishing-gradient/sigmoid.png
+[fig_sigmoidfunc]: /assets/vanishing-gradient/sigmoid_function.png
 [fig_sigmoid_deriv]: /assets/vanishing-gradient/sigmoid_deriv.png
 [fig_node]: /assets/vanishing-gradient/node.png
 [fig_nnet]: /assets/vanishing-gradient/nnet.png
