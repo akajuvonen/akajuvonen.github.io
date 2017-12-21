@@ -73,7 +73,14 @@ gradient values. This is called *exploding gradient*.
 
 #  What happens with a different activation function?
 
-How to combat this? Relu of some other activation function?
+By this point we've established that the choice of activation function is very
+important. The sigmoid function is sort of dead in deep neural networks.
+What else could we use? A popular choice is [rectified linear unit][relu]
+(ReLU). At this point it's enough to mention that ReLU has gradient of 1 when
+the output is > 0, and otherwise zero. This way there we don't have to worry
+about vanishing gradient anymore. The zero gradient values also create sparsity
+in the network, which can be a challenge but also a big advantage. The details
+of that are a story for another day, however.
 
 
 [fig_sigmoid]: /assets/vanishing-gradient/sigmoid.png
@@ -87,3 +94,4 @@ How to combat this? Relu of some other activation function?
 [gradientdesc]: https://en.wikipedia.org/wiki/Gradient_descent
 [chainrule]: https://en.wikipedia.org/wiki/Chain_rule
 [vanishinggrad]: https://en.wikipedia.org/wiki/Vanishing_gradient_problem
+[relu]: https://en.wikipedia.org/wiki/Rectifier_(neural_networks)
