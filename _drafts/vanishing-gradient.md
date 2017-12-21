@@ -42,13 +42,15 @@ a lot of information on those, so I'm keeping it **really** short.
 
 # Backpropagation and vanishing gradient
 
-Example of vanishing gradient. Use sigmoid function as an example.
-This is why sigmoid is dead! Sigmoid derivative max 0.25.
-Mention chain rule = in this case product of derivatives!
-Many more layers = deep learning. Now this problem arises.
+Backpropagation learning.
 
+Gradient, derivative, chain rule (product of derivatives).
+
+Deriv of sigmoid below.
 
 ![Sigmoid derivative][fig_sigmoid_deriv]
+
+Problem with many layers.
 
 Maybe mention exploding gradient, as well?
 
