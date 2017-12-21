@@ -12,7 +12,7 @@ detail because there are already countless resources available.
 
 A neural network consists of *neurons* (or nodes). They take input data multiplied by
 weights and add these together. After this, the aggregated sum is input into
-an activation function, which determines the output of the node. Optimizing
+an activation function, which determines the output of the neuron. Optimizing
 the weights is essentially what a neural network does when it's learning.
 
 ![Example node][fig_node]
@@ -41,8 +41,8 @@ a lot of information on those, so I'm keeping it **really** short.
 # Backpropagation and vanishing gradient
 
 In practice, neural network learning is done by optimizing the weights.
-This can be performed by using [backpropagation][backprop]. We check error
-for each layer, and adjust the weights in the appropriate direction.
+This can be performed by using [backpropagation][backprop]. We check the error
+for each layer and adjust the weights in the appropriate direction.
 This error is then propagated all the way back to the first layer. To do this
 in practice, [gradient descent][gradientdesc] algorithm is often used.
 We need to have a loss function. The gradient tells us which way we need to go
@@ -53,7 +53,7 @@ iterations.
 Calculating the gradient involves the use of derivative of the activation
 function. We can calculate the gradient for different layers of the network
 using the [chain rule][chainrule]. At this point it's enough to know that
-we are basically calculation a *product of derivatives*. We end up multiplying
+we are basically calculating a *product of derivatives*. We end up multiplying
 *n* gradients for *n* layers in the network.
 
 Now let's see what the derivative of the sigmoid function looks like:
