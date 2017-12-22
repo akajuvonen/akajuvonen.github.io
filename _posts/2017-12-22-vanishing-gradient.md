@@ -12,7 +12,7 @@ with some background.
 
 I'm going to give a little of bit of background information needed to understand
 the problem. Some basic understanding of neural networks is useful at this
-point.I'm not going to go into too much detail because there are already
+point. I'm not going to go into too much detail because there are already
 countless resources available.
 
 A neural network consists of *neurons* (or nodes). They take input data
