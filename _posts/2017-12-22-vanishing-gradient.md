@@ -10,13 +10,16 @@ with some background.
 
 # Neural network basics
 
-Let's start with some neural network basics. I'm not going to go into too much
-detail because there are already countless resources available.
+I'm going to give a little of bit of background information needed to understand
+the problem. Some basic understanding of neural networks is useful at this
+point.I'm not going to go into too much detail because there are already
+countless resources available.
 
-A neural network consists of *neurons* (or nodes). They take input data multiplied by
-weights and add these together. After this, the aggregated sum is input into
-an activation function, which determines the output of the neuron. Optimizing
-the weights is essentially what a neural network does when it's learning.
+A neural network consists of *neurons* (or nodes). They take input data
+multiplied by weights and add these together. After this, the aggregated sum is
+input into an activation function, which determines the output of the neuron.
+Optimizing the weights is essentially what a neural network does when it's
+learning.
 
 ![Example node][fig_node]
 
@@ -28,7 +31,9 @@ If we plot it, it looks like this:
 
 ![Sigmoid][fig_sigmoid]
 
-Individual neurons can be combined to form a neural network, which aims to approximate any arbitrary function. Each node in the network has its own inputs, outputs and activations. Below is an example of a simple feed-forward network.
+Individual neurons can be combined to form a neural network, which aims to
+approximate any arbitrary function. Each node in the network has its own inputs,
+outputs and activations. Below is an example of a simple feed-forward network.
 It has an *input layer*, *hidden layer* and *output layer*.
 
 ![Example node][fig_nnet]
@@ -65,11 +70,11 @@ Now let's see what the derivative of the sigmoid function looks like:
 
 Looks like it has the *maximum* value of 0.25, often being much smaller than
 that. Now imagine a deep neural network with many layers: what is going to
-happen? Enter the [vanishing gradient problem][vanishinggrad]. The gradient
-is always less than zero, so it keeps getting smaller and smaller exponentially
-layer by layer (or, it begins to vanish). This means that the *first layers
-train very slowly*. In practice, this means that our network becomes pretty
-much useless.
+happen? Thus, we end up with the [vanishing gradient problem][vanishinggrad].
+The gradient is always less than zero, so it keeps getting smaller and smaller
+exponentially layer by layer (or, it begins to vanish). This means that the
+*first layers train very slowly*. In practice, this means that our network
+becomes pretty much useless.
 
 It's also possible for the gradient to *increase* exponentially with very high
 gradient values. This is called *exploding gradient*.
