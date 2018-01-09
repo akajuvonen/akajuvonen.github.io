@@ -21,8 +21,9 @@ How does dropout work. Below a visualization.
 
 ![Neural net with dropout][fig_nnet_dropout]
 
+Conclusions.
+
+
 [fig_overfitting]: /assets/dropout/overfitting.png
 [fig_nnet]: /assets/dropout/nnet_no_dropout.png
 [fig_nnet_dropout]: /assets/dropout/nnet_dropout.png
-
-Conclusions.
