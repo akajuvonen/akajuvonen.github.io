@@ -42,7 +42,29 @@ averaging). This way individual neurons can't dominate by themselves.
 
 # Example implementation
 
-TODO.
+How to implement dropout in practice? Let's look at [Keras][keras], which is
+a high-level neural network API. It will be integrated into [TensorFlow][tf]
+soon, but can also use other backends, such as [CNTK][cntk].
+
+Keras [Sequential model][keras_seq] allows us to stack model layers linearly.
+Any neural network layer, be it a normal densely connected neural layer or
+a convolutional layer, can be added simply using `model.add()`. In this case,
+the dropout becomes [just another layer][keras_dropout]. First we need to
+import it.
+
+```python
+from keras.layers import Dropout
+```
+
+After this, you only need to add a dropout layer after any neural network
+layer.
+
+```python
+model.add(Dropout(rate=0.25))
+```
+
+In the above example 25% of the input units of a layer are set to 0 during
+training. It really couldn't be simpler.
 
 # Conclusions
 
@@ -51,3 +73,9 @@ TODO.
 [fig_overfitting]: /assets/dropout/overfitting.png
 [fig_nnet]: /assets/dropout/nnet_no_dropout.png
 [fig_nnet_dropout]: /assets/dropout/nnet_dropout.png
+
+[keras]: https://keras.io/
+[tf]: https://www.tensorflow.org/
+[cntk]: https://www.microsoft.com/en-us/cognitive-toolkit/
+[keras_seq]: https://keras.io/models/sequential/
+[keras_dropout]: https://keras.io/layers/core/#dropout
