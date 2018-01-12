@@ -25,16 +25,28 @@ overfitting).
 
 # Using dropout to solve the problem
 
-Normal net.
+There are many ways to solve the presented problem. One solution often used
+in deep neural nets is *dropout*. Below is a picture of a typical neural net
+architecture.
 
 ![Neural net][fig_nnet]
 
-How does dropout work. Below a visualization.
+Now dropout comes to play. The basic idea is very simple. Just randomly
+drop some units in the network in the training phase. This is what it might
+look like:
 
 ![Neural net with dropout][fig_nnet_dropout]
 
-Conclusions.
+The idea is to get all of the neurons to contribute to the model evenly (model
+averaging). This way individual neurons can't dominate by themselves.
 
+# Example implementation
+
+TODO.
+
+# Conclusions
+
+TODO.
 
 [fig_overfitting]: /assets/dropout/overfitting.png
 [fig_nnet]: /assets/dropout/nnet_no_dropout.png
