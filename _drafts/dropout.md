@@ -66,9 +66,13 @@ model.add(Dropout(rate=0.25))
 In the above example 25% of the input units of a layer are set to 0 during
 training. It really couldn't be simpler.
 
-# Conclusions
+# Conclusion
 
-TODO.
+Overfitting is a very real and common problem in machine learning. Dropout
+is a simple and effective [regularization][reg] technique to encourage
+model learning across all neurons in the network. This creates a more
+generalized model that works better with new data. Using dropout can be very
+simple with existing frameworks.
 
 [fig_overfitting]: /assets/dropout/overfitting.png
 [fig_nnet]: /assets/dropout/nnet_no_dropout.png
@@ -79,3 +83,4 @@ TODO.
 [cntk]: https://www.microsoft.com/en-us/cognitive-toolkit/
 [keras_seq]: https://keras.io/models/sequential/
 [keras_dropout]: https://keras.io/layers/core/#dropout
+[reg]: https://en.wikipedia.org/wiki/Regularization_(mathematics)
