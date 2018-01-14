@@ -3,7 +3,9 @@ layout: post
 title:  "Overfitting and Dropout in Neural Networks"
 ---
 
-Intro.
+In this post we are going to take a look at a problem called overfitting
+and it's potential solution: dropout (or dropout layer). This is relevant for
+neural networks and deep learning.
 
 # Overfitting
 
