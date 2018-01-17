@@ -44,7 +44,9 @@ y_train = to_categorical(y_train, N_CLASSES)
 y_test = to_categorical(y_test, N_CLASSES)
 ```
 
-First neural net version (simple):
+First neural net version (simple). A minimal CNN with one 2D convolutional
+layer, max pooling layer and a normal densely connected neural network layer
+with 10 outputs (for 10 different digits).
 
 ```python
 # We use the sequential model
@@ -60,7 +62,8 @@ model.add(Flatten())
 model.add(Dense(10, activation='softmax'))
 ```
 
-Compile and fit:
+Compile and fit. We have to compile the model, first. In this case Adam is
+used for optimization.
 
 ```python
 # Compile the model with Adam optimizer
@@ -72,7 +75,8 @@ model.fit(x_train, y_train, batch_size=BATCH_SIZE, epochs=EPOCHS,
           validation_data=(x_test, y_test))
 ```
 
-Results and metrics:
+Results and metrics. Print the final loss (try minimize) and accuracy (try to
+maximize). Also a confusion matrix.
 
 ```python
 # Print the final metrics
