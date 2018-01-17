@@ -5,6 +5,14 @@ title:  "Hand-written Digit Recognition with Deep Learning"
 
 Intro.
 
+# Data description
+
+The [MNIST][mnist] database consists of images of handwritten digits. The
+dataset has 60,000 samples for training and 10,000 for testing. The images
+contain normalized and centered samples with 28x28 pixels. Using MNIST database
+for handwritten digit recognition is a very typical example case, often using
+[convolutional neural networks][cnn] (CNN).
+
 # Version 1
 
 Imports:
@@ -91,3 +99,6 @@ y_actual = np.argmax(y_test, axis=1)
 cm = confusion_matrix(y_actual, y_predicted)
 print(cm)
 ```
+
+[mnist]: http://yann.lecun.com/exdb/mnist/
+[cnn]: https://en.wikipedia.org/wiki/Convolutional_neural_network
