@@ -8,12 +8,13 @@ permalink: /about/
 
 Hi, my name is Antti, and I'm a Data Scientist living in Finland.
 I got a PhD in IT and I'm a startup Co-Founder @
-[CAP Data Technologies].
+[CAP Data Technologies]. I have 7+ years of experience in Machine Learning and
+AI research and also practical business cases. I am in the fortunate position
+of being able to say that my work is also my hobby.
 
 My interests include Machine Learning, AI, Big Data, programming and technology.
-I'm also a big fan of presenting complicated concepts in a simple way
-(In other words, *For Dummies*) and will write about my observations in the
-blog.
+I'm also a big fan of presenting complicated concepts in a simple way and will
+write about my observations in the blog.
 
 # Links
 - [GitHub]
