@@ -100,8 +100,6 @@ cm = confusion_matrix(y_actual, y_predicted)
 print(cm)
 ```
 
-## Results
-
 Results below:
 
 ```
@@ -134,8 +132,6 @@ model.add(Conv2D(filters=32, kernel_size=(3, 3), activation='relu'))
 .
 .
 ```
-
-## Results
 
 Results below:
 
