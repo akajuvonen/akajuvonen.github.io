@@ -100,5 +100,21 @@ cm = confusion_matrix(y_actual, y_predicted)
 print(cm)
 ```
 
+# Version 2
+
+Added new convolutional layer.
+
+```python
+.
+.
+# A 2-D convolutional layer
+model.add(Conv2D(filters=16, kernel_size=(3, 3), activation='relu',
+                 input_shape=INPUT_SHAPE))
+# Let's add a second conv layer
+model.add(Conv2D(filters=32, kernel_size=(3, 3), activation='relu'))
+.
+.
+```
+
 [mnist]: http://yann.lecun.com/exdb/mnist/
 [cnn]: https://en.wikipedia.org/wiki/Convolutional_neural_network
