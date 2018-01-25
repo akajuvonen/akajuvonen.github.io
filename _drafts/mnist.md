@@ -150,5 +150,44 @@ Accuracy:  0.9858
  [   0    2    2    2    8    3    0    2    6  984]]
 ```
 
+# Version 3
+
+More layers:
+
+```python
+# We use the sequential model
+model = Sequential()
+# A 2-D convolutional layer
+model.add(Conv2D(filters=16, kernel_size=(3, 3), activation='relu',
+                 input_shape=INPUT_SHAPE))
+model.add(Conv2D(filters=16, kernel_size=(3, 3), activation='relu'))
+# Pooling layer with pool size and strides = (2,2)
+model.add(MaxPooling2D(pool_size=2))
+model.add(Conv2D(filters=32, kernel_size=(3, 3), activation='relu'))
+model.add(Conv2D(filters=32, kernel_size=(3, 3), activation='relu'))
+model.add(MaxPooling2D(pool_size=2))
+# Flattens the output for normal neural network layer
+model.add(Flatten())
+# Output layer with 10 outputs, uses softmax classifier
+model.add(Dense(10, activation='softmax'))
+```
+
+Results:
+
+```
+Loss:  0.0282217900731
+Accuracy:  0.9922
+[[ 976    0    1    0    0    0    1    1    1    0]
+ [   0 1129    0    1    0    0    2    1    1    1]
+ [   0    1 1024    0    0    0    1    6    0    0]
+ [   0    0    1 1006    0    3    0    0    0    0]
+ [   0    0    0    0  979    0    0    0    2    1]
+ [   1    0    0    4    0  880    2    0    2    3]
+ [   5    2    0    1    1    0  949    0    0    0]
+ [   0    4    2    0    0    0    0 1020    1    1]
+ [   2    0    1    2    0    0    1    0  963    5]
+ [   0    0    0    1    7    2    0    0    3  996]]
+```
+
 [mnist]: http://yann.lecun.com/exdb/mnist/
 [cnn]: https://en.wikipedia.org/wiki/Convolutional_neural_network
