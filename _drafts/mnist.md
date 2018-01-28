@@ -135,6 +135,7 @@ model.add(Conv2D(filters=32, kernel_size=(3, 3), activation='relu'))
 model.add(MaxPooling2D(pool_size=2))
 # Flattens the output for normal neural network layer
 model.add(Flatten())
+model.add(Dense(128, activation='relu'))
 # Output layer with 10 outputs, uses softmax classifier
 model.add(Dense(10, activation='softmax'))
 ```
@@ -142,18 +143,66 @@ model.add(Dense(10, activation='softmax'))
 Results:
 
 ```
-Loss:  0.0282217900731
-Accuracy:  0.9922
-[[ 976    0    1    0    0    0    1    1    1    0]
- [   0 1129    0    1    0    0    2    1    1    1]
- [   0    1 1024    0    0    0    1    6    0    0]
- [   0    0    1 1006    0    3    0    0    0    0]
- [   0    0    0    0  979    0    0    0    2    1]
- [   1    0    0    4    0  880    2    0    2    3]
- [   5    2    0    1    1    0  949    0    0    0]
- [   0    4    2    0    0    0    0 1020    1    1]
- [   2    0    1    2    0    0    1    0  963    5]
- [   0    0    0    1    7    2    0    0    3  996]]
+Loss:  0.034049704785
+Accuracy:  0.9912
+[[ 978    0    0    0    0    0    0    1    1    0]
+ [   1 1130    0    1    0    0    1    2    0    0]
+ [   1    0 1021    0    0    0    0    8    2    0]
+ [   0    0    2 1004    0    2    0    0    2    0]
+ [   0    0    0    0  976    0    1    0    0    5]
+ [   1    0    0    6    0  883    2    0    0    0]
+ [   3    2    1    0    2    5  942    0    3    0]
+ [   0    3    1    1    0    0    0 1018    1    4]
+ [   3    0    1    0    1    0    1    1  962    5]
+ [   0    0    0    0    5    6    0    0    0  998]]
+```
+
+# Version 3
+
+Added dropout.
+
+```python
+from keras.layers import Dropout
+```
+
+```python
+# We use the sequential model
+model = Sequential()
+# A 2-D convolutional layer
+model.add(Conv2D(filters=16, kernel_size=(3, 3), activation='relu',
+                 input_shape=INPUT_SHAPE))
+model.add(Conv2D(filters=16, kernel_size=(3, 3), activation='relu'))
+# Pooling layer with pool size and strides = (2,2)
+model.add(MaxPooling2D(pool_size=2))
+# Add a dropout layer to avoid overfitting
+model.add(Dropout(0.25))
+model.add(Conv2D(filters=32, kernel_size=(3, 3), activation='relu'))
+model.add(Conv2D(filters=32, kernel_size=(3, 3), activation='relu'))
+model.add(MaxPooling2D(pool_size=2))
+model.add(Dropout(0.25))
+# Flattens the output for normal neural network layer
+model.add(Flatten())
+model.add(Dense(128, activation='relu'))
+model.add(Dropout(0.25))
+# Output layer with 10 outputs, uses softmax classifier
+model.add(Dense(10, activation='softmax'))
+```
+
+Results:
+
+```
+Loss:  0.0138718557994
+Accuracy:  0.9959
+[[ 978    0    0    0    0    0    0    1    1    0]
+ [   0 1132    0    1    0    0    1    1    0    0]
+ [   0    1 1028    0    0    0    1    2    0    0]
+ [   0    0    0 1007    0    3    0    0    0    0]
+ [   0    0    0    0  980    0    0    0    0    2]
+ [   0    0    0    5    0  886    1    0    0    0]
+ [   2    2    0    0    1    1  952    0    0    0]
+ [   0    2    0    0    0    0    0 1025    0    1]
+ [   0    0    1    1    0    0    0    0  970    2]
+ [   1    0    0    1    2    3    0    1    0 1001]]
 ```
 
 [mnist]: http://yann.lecun.com/exdb/mnist/
