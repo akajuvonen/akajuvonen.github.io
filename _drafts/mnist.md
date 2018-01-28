@@ -119,39 +119,6 @@ Accuracy:  0.9819
 
 # Version 2
 
-Added new convolutional layer.
-
-```python
-.
-.
-# A 2-D convolutional layer
-model.add(Conv2D(filters=16, kernel_size=(3, 3), activation='relu',
-                 input_shape=INPUT_SHAPE))
-# Let's add a second conv layer
-model.add(Conv2D(filters=32, kernel_size=(3, 3), activation='relu'))
-.
-.
-```
-
-Results below:
-
-```
-Loss:  0.0685024638586
-Accuracy:  0.9858
-[[ 976    0    1    0    0    0    2    0    0    1]
- [   0 1133    1    0    0    0    0    0    1    0]
- [   1    1 1021    0    1    0    1    4    3    0]
- [   0    0    4  994    0    8    0    2    2    0]
- [   1    0    0    0  976    0    1    0    1    3]
- [   2    0    1    5    0  880    2    0    2    0]
- [   4    2    0    0    7    4  939    0    2    0]
- [   0    8   12    1    2    1    0  993    2    9]
- [   3    0    1    0    0    4    0    2  962    2]
- [   0    2    2    2    8    3    0    2    6  984]]
-```
-
-# Version 3
-
 More layers:
 
 ```python
