@@ -12,13 +12,42 @@ from the [MNIST][mnist] hand-written digit data.
 
 # Autoencoder
 
+This part assumes that the reader has at least a basic understanding of what
+neural networks are (on an intuitive level).
 
+As mentioned, autoencoders are neural networks that simply set the output same
+as the input. Then they attempt to learn the parameters of the network and
+minimize reconstruction error. But what is the point of that? For example,
+a network with a hidden layer with the same size as the input (and output)
+could just simply copy the inputs to the output, and have zero error. This
+would of course be meaningless.
+
+But if we consider the situation where hidden layers are smaller, it's obvious
+that the network needs to learn some low-dimensional representation of the data
+in order to reconstruct it later.
+
+Below is a visualization of this case, including *encoder* and *decoder* parts
+of the network. This kind of autoencoder is called *undercomplete*. Encoder
+learns to represent the data in lower dimensions (ending up in the middle
+layer *code*). Middle layer represents the latent space. Decoder then
+reconstructs the data into ouput.
+
+![Example][fig_ae]
+
+It is also possible to have more neurons in hidden than input layer. These
+types of autoencoders are *overcomplete*. In this case it is necessary to
+introduce some kind of regularization to encourage sparsity for the network
+to actually work.
+
+I don't like to go into too much detail, since a lot has been already written
+about autoencoders. However, it would be nice to visualize the learning
+process to get a better idea how it all works. Let's do that with some
+TensorFlow code.
 
 # Demo with code
 
 TODO.
 
-![Example][fig_ae]
 
 ![Visualization][gif_animation]
 
