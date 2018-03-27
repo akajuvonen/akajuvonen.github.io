@@ -71,9 +71,19 @@ def autoencoder(x, output_size, outer_size=500, inner_size=100):
         return output
 ```
 
+Overall graph.
+
+![First graph][graph1]
+
+Autoencoder internal graph.
+
+![Second graph.][graph2]
+
 ![Visualization][gif_animation]
 
 [fig_ae]: /assets/autoencoder/autoencoder.png
 [gif_animation]: /assets/autoencoder/animation.gif
 [mnist]: http://yann.lecun.com/exdb/mnist/
 [ae_repo]: https://github.com/akajuvonen/autoencoder-reconstruct-visualizer
+[graph1]: /assets/autoencoder/tf_graph_1.png
+[graph2]: /assets/autoencoder/tf_graph_2.png
