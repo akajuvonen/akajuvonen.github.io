@@ -47,6 +47,19 @@ TensorFlow code.
 # Demo with code
 
 Full commented code can be found in [this GitHub repository][ae_repo].
+Here are some simplified code snippets to demonstrate how to define an
+autoencoder using TensorFlow. All of the code assumes that you have TF
+installed and imported:
+
+```python
+import tensorflow as tf
+```
+
+We can now define a model (graph) for autoencoder. This example architecture
+consists of 3 hidden layers with 500, 100 and 500 neurons, respectively.
+We can use `tf.layers.dense` for densely connected neural network layers.
+TensorFlow layers automatically take care of weight and bias initialization.
+Input and output tensors `x` and `output` are of the same size.
 
 ```python
 def autoencoder(x, output_size, outer_size=500, inner_size=100):
