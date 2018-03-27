@@ -63,11 +63,12 @@ Input and output tensors `x` and `output` are of the same size.
 
 ```python
 def autoencoder(x, output_size, outer_size=500, inner_size=100):
-    encoder = tf.layers.dense(x, outer_size)
-    code = tf.layers.dense(encoder, inner_size)
-    decoder = tf.layers.dense(code, outer_size)
-    output = tf.layers.dense(decoder, output_size)
-    return output
+    with tf.variable_scope(name):
+        encoder = tf.layers.dense(x, outer_size, name='encoder')
+        code = tf.layers.dense(encoder, inner_size, name='code')
+        decoder = tf.layers.dense(code, outer_size, name='decoder')
+        output = tf.layers.dense(decoder, output_size, name='output')
+        return output
 ```
 
 ![Visualization][gif_animation]
