@@ -46,11 +46,20 @@ TensorFlow code.
 
 # Demo with code
 
-TODO.
+Full commented code can be found in [this GitHub repository][ae_repo].
 
+```python
+def autoencoder(x, output_size, outer_size=500, inner_size=100):
+    encoder = tf.layers.dense(x, outer_size)
+    code = tf.layers.dense(encoder, inner_size)
+    decoder = tf.layers.dense(code, outer_size)
+    output = tf.layers.dense(decoder, output_size)
+    return output
+```
 
 ![Visualization][gif_animation]
 
 [fig_ae]: /assets/autoencoder/autoencoder.png
 [gif_animation]: /assets/autoencoder/animation.gif
 [mnist]: http://yann.lecun.com/exdb/mnist/
+[ae_repo]: https://github.com/akajuvonen/autoencoder-reconstruct-visualizer
