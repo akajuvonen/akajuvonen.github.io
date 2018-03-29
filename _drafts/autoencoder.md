@@ -71,13 +71,18 @@ def autoencoder(x, output_size, outer_size=500, inner_size=100):
         return output
 ```
 
-Overall graph.
+From the graph below you can see how TensorFlow constructs the network,
+including MSE and gradient calculation. The relevant values are fed to Adam
+optimizer.
 
-![First graph][graph1]
+![High-level graph][graph1]
 
-Autoencoder internal graph.
+If we take a look inside the autoencoder graph, we can see that we have exactly
+the layers we specified in our model. From this you can also see how the MSE
+is only calculated from the output layer (and input layer of course, because
+that is the data we are trying to reconstruct).
 
-![Second graph.][graph2]
+![Autoencoder graph.][graph2]
 
 ![Visualization][gif_animation]
 
