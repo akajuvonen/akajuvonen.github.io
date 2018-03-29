@@ -96,6 +96,7 @@ example_fig = [mnist.train.images[10]]
 learning_rate = 0.001
 # Images are 28*28 pixels
 input_size = 28*28
+# Mini-batch size
 batch_size = 100
 # Total number of steps
 steps = 2000
@@ -120,13 +121,15 @@ with tf.Session() as sess:
     sess.run(init)
     for i in range(1, steps+1):
         batch, _ = mnist.train.next_batch(batch_size)
-        _, l, ts = sess.run([train_op, loss], feed_dict={x: batch})
+        _, l = sess.run([train_op, loss], feed_dict={x: batch})
         if i % save_every == 0:
             print('Training loss at step {0}: {1}'.format(i, l))
             # Reconstruct example image
             result = sess.run([output], feed_dict={x: example_fig})
             # Code for saving figure here
 ```
+
+# Visualizing reconstruction
 
 ![Visualization][gif_animation]
 
