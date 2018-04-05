@@ -84,6 +84,11 @@ that is the data we are trying to reconstruct).
 
 ![Autoencoder graph.][graph2]
 
+We can load the MNIST dataset, and also select one example image for visualizing
+reconstruction (in this case image with index 10). With TensorFlow 1.7 and
+newer you have to load datasets manually, or use some other method (such as
+scikit learn).
+
 ```python
 #Load MNIST data (NOTE: Removed in TF 1.7)
 mnist = tf.contrib.learn.datasets.load_dataset('mnist')
