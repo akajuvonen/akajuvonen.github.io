@@ -96,6 +96,8 @@ mnist = tf.contrib.learn.datasets.load_dataset('mnist')
 example_fig = [mnist.train.images[10]]
 ```
 
+Next, we need to define some parameters.
+
 ```python
 # Learning rate for Adam optimizer
 learning_rate = 0.001
@@ -104,10 +106,23 @@ input_size = 28*28
 # Mini-batch size
 batch_size = 100
 # Total number of steps
-steps = 2000
+steps = 10000
 # Save training loss and image every [save_every] steps
 save_every = 100
 ```
+
+Now we are actually going to do some TensorFlow coding. TF placeholder `x` is
+going to be the placeholder for our model input data. Placeholder just means
+that we will be replacing it with the actual data when training and running
+the model, it does not have any value by itself. Other often used types are
+*constants* (values which do not change) and *variables* (values will change,
+and are optimized by TensorFlow during model training, e.g., weights and biases).
+
+We define our output op, where the autoencoder model takes our input placeholder
+and returns model outputs. MSE loss is used in this case, and we utilize
+Adam optimizer (the details of which I will get to in a later post). The train
+op simply uses Adam optimizer to minimize the loss that we defined, using the
+learning rate parameter defined previously.
 
 ```python
 # Input placeholder
