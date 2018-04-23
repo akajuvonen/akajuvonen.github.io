@@ -135,6 +135,13 @@ loss = tf.losses.mean_squared_error(x, output)
 train_op = tf.train.AdamOptimizer(learning_rate).minimize(loss)
 ```
 
+After initializing the TF session, we finally get to our training loop. This
+code uses the traditional and versatile feed dict functionality, but it's good
+to note that for performance reasons other methods might be recommended, e.g.,
+queues. Every iteration, we take a random mini-batch from MNIST data and run
+the training and loss operations. Every once in a while we also print the
+training loss and also save the image (you can do this however you want).
+
 ```python
 with tf.Session() as sess:
     init = tf.global_variables_initializer()
