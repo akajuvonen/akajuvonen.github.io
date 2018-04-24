@@ -158,7 +158,18 @@ with tf.Session() as sess:
 
 # Visualizing reconstruction
 
+Finally we can visualize the reconstructed image. As the autoencoder gets
+better quite quickly, I'm only going to show the first 200 iterations.
+Looking at the image below, we can see how the reconstruction changes from
+basically noise into something much better.
+
 ![Visualization][gif_animation]
+
+In conclusion, this example does not yet explain how autoencoders can be useful.
+However, we see that even though an image with 784 pixels is compressed into
+100 dimensions, it can still be reconstructed pretty well. It's this latent
+layer that really holds the key to the usefulness of autoencoders. I will have
+to get back to that in a later post.
 
 [fig_ae]: /assets/autoencoder/autoencoder.png
 [gif_animation]: /assets/autoencoder/animation.gif
