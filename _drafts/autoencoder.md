@@ -62,7 +62,7 @@ TensorFlow layers automatically take care of weight and bias initialization.
 Input and output tensors `x` and `output` are of the same size.
 
 ```python
-def autoencoder(x, output_size, outer_size=500, inner_size=100):
+def autoencoder(x, output_size, outer_size=400, inner_size=100):
     with tf.variable_scope(name):
         encoder = tf.layers.dense(x, outer_size, name='encoder')
         code = tf.layers.dense(encoder, inner_size, name='code')
