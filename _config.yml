@@ -22,7 +22,6 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: akajuvonen
 github_username:  akajuvonen
-google_analytics: UA-108078628-1
 
 # Build settings
 markdown: kramdown
@@ -45,4 +44,3 @@ paginate_path: /page:num/
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
-
