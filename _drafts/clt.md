@@ -1,11 +1,7 @@
 ---
 layout: post
-title: "Central Limit Theorem - Seeing is Believing"
+title: "Understanding LLN and CLT with Coin Toss"
 ---
-
-What is CLT.
-
-# Demo with code
 
 TODO.
 
