@@ -7,7 +7,7 @@ Intro.
 
 # Law of large numbers
 
-LLN.
+LLN. [Link][lln].
 
 ![Flips][fig_clt_flips]
 
@@ -19,3 +19,5 @@ CLT.
 
 [fig_clt_flips]: /assets/clt/flips.png
 [fig_clt_cointoss]: /assets/clt/ex.png
+
+[lln]: https://en.wikipedia.org/wiki/Law_of_large_numbers
