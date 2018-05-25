@@ -13,7 +13,7 @@ LLN. [Link][lln].
 
 # Central limit theorem
 
-CLT.
+CLT. [Link][clt].
 
 ![Example][fig_clt_cointoss]
 
@@ -21,3 +21,4 @@ CLT.
 [fig_clt_cointoss]: /assets/clt/ex.png
 
 [lln]: https://en.wikipedia.org/wiki/Law_of_large_numbers
+[clt]: https://en.wikipedia.org/wiki/Central_limit_theorem
