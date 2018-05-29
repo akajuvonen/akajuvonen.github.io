@@ -3,7 +3,10 @@ layout: post
 title: "Understanding LLN and CLT with Coin Toss"
 ---
 
-Intro.
+In this post, I'm going to briefly discuss two simple but important concepts
+in probability theory: law of large numbers (LLN) and central limit theorem
+(CLT). I'm also going to explain the significance of these theorems and
+present visualizations using an example.
 
 # Law of large numbers
 
