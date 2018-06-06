@@ -28,6 +28,11 @@ observation that has many real-life applications. For example,
 [Monte Carlo methods][mcm] use this theorem. In addition, casinos can use it to
 guarantee long-term outcomes (and make money).
 
+It is also important to remember that in the previous example, any individual
+coin flip does not depend on the previous observations. You could flip many
+tails, but there is no guarantee that the next flips are more likely to be
+heads. LLN only works with a large number of observations.
+
 # Central limit theorem
 
 CLT. [Link][clt].
