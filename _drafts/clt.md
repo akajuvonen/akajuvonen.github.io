@@ -24,7 +24,9 @@ to get close to the image below.
 
 This means that on average about 50% of coin flips be heads (and tails).
 LLN seems deceptively simple, and it probably is, but it's also an important
-observation that has many real-life applications.
+observation that has many real-life applications. For example,
+[Monte Carlo methods][mcm] use this theorem. In addition, casinos can use it to
+guarantee long-term outcomes (and make money).
 
 # Central limit theorem
 
@@ -37,3 +39,4 @@ CLT. [Link][clt].
 
 [lln]: https://en.wikipedia.org/wiki/Law_of_large_numbers
 [clt]: https://en.wikipedia.org/wiki/Central_limit_theorem
+[mcm]: https://en.wikipedia.org/wiki/Monte_Carlo_method
