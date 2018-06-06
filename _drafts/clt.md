@@ -10,9 +10,21 @@ present visualizations using an example.
 
 # Law of large numbers
 
-LLN. [Link][lln].
+[Law of large numbers][lln] or LNN is a theorem in probability theory. It
+tells us what happens when you repeat an experiment many times. It states
+that the average result of the experiment will get closer and closer to the
+expected value as we keep repeating the experiment.
+
+Consider flipping a coin multiple times. If you just do it, say, 5 times,
+you can end up with, e.g., getting heads 1 time and tails 4 times. But if
+we keep flipping the coin many times, the ratios of heads and tails wil start
+to get close to the image below.
 
 ![Flips][fig_clt_flips]
+
+This means that on average about 50% of coin flips be heads (and tails).
+LLN seems deceptively simple, and it probably is, but it's also an important
+observation that has many real-life applications.
 
 # Central limit theorem
 
