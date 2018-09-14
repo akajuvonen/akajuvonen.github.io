@@ -17,7 +17,7 @@ expected value as we keep repeating the experiment.
 
 Consider flipping a coin multiple times. If you just do it, say, 5 times,
 you can end up with, e.g., getting heads 1 time and tails 4 times. But if
-we keep flipping the coin many times, the ratios of heads and tails wil start
+we keep flipping the coin many times, the ratios of heads and tails will start
 to get close to the image below.
 
 ![Flips][fig_clt_flips]
@@ -35,7 +35,15 @@ heads. LLN only works with a large number of observations.
 
 # Central limit theorem
 
-CLT. [Link][clt].
+Another, perhaps more powerful, theorem is called [Central Limit Theorem][clt] (CLT).
+This is where things get really interesting. CLT states that when we keep adding
+independent random variables, their normalized sum approaches normal distribution.
+This happens even if the random variables themselves are not normally distributed.
+Let's look at the previous example again. We know that coin tosses follow an
+uniform distribution: getting heads or tails are equally probable. But let's
+perform coin toss, say, 100 times, and look at the resulting counts for heads
+and tails. If this experiment is repeated enough times, interesting things
+happen.
 
 ![Example][fig_clt_cointoss]
 
