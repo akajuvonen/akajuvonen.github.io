@@ -6,13 +6,12 @@ permalink: /about/
 
 # Antti Juvonen
 
-Hi, my name is Antti, and I'm a Data Scientist living in Finland.
-I got a PhD in IT and I'm a startup Co-Founder @
-[CAP Data Technologies]. I have 7+ years of experience in Machine Learning and
-AI research and also practical business cases. I am in the fortunate position
-of being able to say that my work is also my hobby.
+Hi, I'm Antti, a Data Scientist from Finland currently living in Tokyo, Japan. I'm working as a
+Machine Learning Engineer @ [Cogent Labs].
+I got a PhD in IT and co-founded [CAP Data Technologies]. I have 7+ years of experience in Machine Learning and
+software engineering.
 
-My interests include Machine Learning, AI, Big Data, programming and technology.
+My interests include programming (mostly Python), Machine Learning, AI, Big Data and technology.
 I'm also a big fan of presenting complicated concepts in a simple way and will
 write about my observations in the blog.
 
@@ -37,6 +36,7 @@ write about my observations in the blog.
   - Antti Juvonen and Tuomo Sipola. *[Anomaly detection framework using rule extraction for efficient intrusion detection]*. arXiv:1410.7709 [cs.NI], Technical report, 2014.
 
 [CAP Data Technologies]: https://www.capdatatechnologies.com
+[Cogent Labs]: https://www.cogent.co.jp/en/
 [GitHub]: https://github.com/akajuvonen
 [Twitter]: https://twitter.com/akajuvonen
 [LinkedIn]: https://linkedin.com/in/akajuvonen
