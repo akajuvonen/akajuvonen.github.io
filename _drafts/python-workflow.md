@@ -73,17 +73,26 @@ might have a tool for manipulating data, install it inside a virtualenv to be
 able to use whatever commands it comes with, and actually use those commands
 in the actual data directory.
 
-# TODO
+# About dependency links
 
 I also often work with projects that use dependency links. They should be
 deprecated, but since it is still often used, it's convenient for me to be
-able to use them still.
+able to use them still. Currently I can just use them with pip:
 
-Example link: [Pipenv link][pipenv].
+```python
+pip install -e . --process-dependency-links
+```
+
+It must be noted that [PEP 508][pep508] describes a way to specify
+URL dependencies, and it should be already [merged][pep508merge] to pip.
+However, it seems that this does not fully replace dependency links,
+at least for some people, as mentioned in [this issue][issue].
 
 [pyenv]: https://github.com/pyenv/pyenv
 [pyenvvenv]: https://github.com/pyenv/pyenv-virtualenvo
 [wrapper]: https://virtualenvwrapper.readthedocs.io/en/latest/
 [pew]: https://github.com/berdario/pew
+[pep508]: https://www.python.org/dev/peps/pep-0508/
+[pep508merge]: https://github.com/pypa/pip/pull/5571
+[issue]: https://github.com/pypa/pip/issues/5898
 [pipenv]: https://github.com/pypa/pipenv
-
