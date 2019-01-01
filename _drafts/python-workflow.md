@@ -91,6 +91,10 @@ URL dependencies, and it should be already [merged][pep508merge] to pip.
 However, it seems that this does not fully replace dependency links,
 at least for some people, as mentioned in [this issue][issue].
 
+# Pipenv (TODO)
+
+Notes about pipenv, what problems it solves, what it does not.
+
 [pyenv]: https://github.com/pyenv/pyenv
 [pyenvvenv]: https://github.com/pyenv/pyenv-virtualenvo
 [wrapper]: https://virtualenvwrapper.readthedocs.io/en/latest/
