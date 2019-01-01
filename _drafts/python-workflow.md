@@ -7,7 +7,10 @@ I have been trying to find an optimal workflow for my work and personal needs.
 Managing Python packaging and dependencies is not always simple. Ultimately
 every workflow is different, and this leads to different tools being used.
 I will write some notes about what I'm currently doing, as well as some
-experiments with Pipenv to see how that compares in my case.
+experiments with Pipenv to see how that compares in my case. This post will
+not be as structured as I would like, it is closer to personal notes that
+may be useful to someone else, as well. In the future, I hope to return
+to this topic as my workflow changes.
 
 # Managing multiple Python versions
 
