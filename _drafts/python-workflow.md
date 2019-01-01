@@ -37,6 +37,44 @@ cd folder/
 pyenv local 3.6.5
 ```
 
+# Virtual environments
+
+This is a pretty obvious one. For every project I create a separate virtual
+environment. I have tried several solutions for this, but eventually wanted
+to keep it simple, and just use the `venv` module that now comes with Python.
+
+In practice, I first set the local python version in the project directory.
+This means that `python` points to the specified Python version installed
+by pyenv. It ends up being used like this:
+
+```python
+# Set python version for this folder
+pyenv local 3.7.1
+
+# Create a virtual environment
+python -m venv virtual-env-dir-name
+```
+
+I do not use any tool that helps me manage virtual envs. I like to keep it simple,
+and have not felt the need for managing all the virtual environments in one place.
+Some tools that I have considered or used in the past:
+- [pyenv-virtualenv][pyenvvenv] is a pyenv plugin for managing virtual envs
+- [virtualenvwrapper][wrapper] contains extensions to virtualenv tools, including
+  the awesome command `workon` for easily switching between venvs
+- [pew][pew] also helps managing multiple environments easily in one location
+
+I will most likely use one the above tools in the future. But it's not as big
+of a deal as I thought it would be. Also, using only the included `venv` module
+there are less tools/dependencies, for whatever that is worth.
+
+One thing that I really like is the ability to activate an environment, and use
+installed python commands in a completely different directory. For example, I
+might have a tool for manipulating data, install it inside a virtualenv to be
+able to use whatever commands it comes with, and actually use those commands
+in the actual data directory.
+
+# TODO
+
 I also often work with projects that use dependency links. They should be
 deprecated, but since it is still often used, it's convenient for me to be
 able to use them still.
@@ -44,4 +82,8 @@ able to use them still.
 Example link: [Pipenv link][pipenv].
 
 [pyenv]: https://github.com/pyenv/pyenv
+[pyenvvenv]: https://github.com/pyenv/pyenv-virtualenvo
+[wrapper]: https://virtualenvwrapper.readthedocs.io/en/latest/
+[pew]: https://github.com/berdario/pew
 [pipenv]: https://github.com/pypa/pipenv
+
