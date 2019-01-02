@@ -27,7 +27,7 @@ and manage any Python versions rather easily. It does one thing, and does
 it reasonably well in my experience. I can set both global and local versions
 separately. For example:
 
-```python
+```bash
 # Install specific version
 pyenv install 3.7.1
 
@@ -50,7 +50,7 @@ In practice, I first set the local python version in the project directory.
 This means that `python` points to the specified Python version installed
 by pyenv. It ends up being used like this:
 
-```python
+```bash
 # Set python version for this folder
 pyenv local 3.7.1
 
@@ -82,7 +82,7 @@ I also often work with projects that use dependency links. They should be
 deprecated, but since it is still often used, it's convenient for me to be
 able to use them still. Currently I can just use them with pip:
 
-```python
+```bash
 pip install -e . --process-dependency-links
 ```
 
