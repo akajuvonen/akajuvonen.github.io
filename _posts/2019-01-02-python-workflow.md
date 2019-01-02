@@ -55,7 +55,7 @@ by pyenv. It ends up being used like this:
 pyenv local 3.7.1
 
 # Create a virtual environment
-python -m venv virtual-env-dir-name
+python -m venv virtual-env-directory-name
 ```
 
 I do not use any tool that helps me manage virtual envs. I like to keep it simple,
