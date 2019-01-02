@@ -91,9 +91,70 @@ URL dependencies, and it should be already [merged][pep508merge] to pip.
 However, it seems that this does not fully replace dependency links,
 at least for some people, as mentioned in [this issue][issue].
 
-# Pipenv (TODO)
+# Trying out Pipenv
 
-Notes about pipenv, what problems it solves, what it does not.
+Recently I tried [Pipenv][pipenv] to see if that would improve my workflow.
+It handles the use of virtualenv and pip automatically. A virtual environment
+is automatically created if it does not already exist. Instead of using
+`requirements.txt`, Pipenv uses `Pipfile` and `Pipfile.lock`.
+
+I can install whatever packages I need with `pipenv install`, and they are
+automatically added to `Pipfile`. Dependencies can be flagged as development
+only, and those can be installed with `pipenv install --dev`. Creating a
+lockfile can be done with `pipenv lock`, but unfortunately this might
+take a long time. This seems to be a common complaint, although in my use
+cases the time taken was acceptable. It is also recommended to include
+the lockfile in version control, so creating it all the time is not necessary.
+
+Running commands inside virtual environment happens like this: `pipenv run COMMAND`.
+This is rather simple, but it is a bit annoying to type every time I want to run
+something. Alternatively, I can just open a new shell with `pipenv shell`.
+Unfortunately, this does not work very well without additional configuration
+(I'm using MacOS and [iTerm2][iterm]). For example, my custom iTerm colors are lost.
+
+One thing that I do like is `pipenv graph`, which prints out a nice dependency
+graph. I did not end up using this too often, but it is a nice feature.
+
+The main problem I had with pipenv is that for some projects `pipenv install`
+did not succeed. I had an existing `requirements.txt` which should be fine,
+but for some reason installation did not succeed. `pip install` works fine.
+I have to look into this a bit more. In the mean time, I could just use
+`pipenv run pip install ...` but this really makes no sense, it's basically
+an anti-pattern. Also, doing that did not update my Pipfile, so the whole
+point of using Pipenv is lost.
+
+I also had an issues where I thought I could not use dependency links, since
+`pipenv install` does not have an argument for that. In the end it did work
+by setting `PIP_PROCESS_DEPENDENCY_LINKS=1` environment variable first.
+
+Overall, it seems that Pipenv does not really work well for at the moment.
+It does not solve the issues that I have been having, and outright
+does not work for some existing projects. Locking is very slow and
+typing `pipenv run` is tedious. I might end up using for some new
+personal projects in the future, however, and see if I get used
+to the new workflow.
+
+# Current workflow
+
+I am still sticking to my old workflow, which is
+1. set local python version: `pyenv local VERSION`
+2. init a new virtual environment: `python -m venv VENV_NAME`
+3. activate virtual env
+4. `pip install` whatever is needed, manage `requirements.txt` with `pip freeze`
+
+`setup.py` needs to manually kept up to date in any case. Also it's probably
+a good idea to use some tool to manage multiple virtual environments and
+switch between them. Other than that, for my basic workflow these commands work
+fine and there are very few extra dependencies.
+
+I will keep experimenting with Pipenv, and probably try out other tools like
+[poetry][poetry], although it has its own issues. One thing I'm especially
+interested in is reliably dependency resolution, since I have had some
+issues with that.
+
+It's obvious that Python packaging and dependency management are pain points.
+There are multiple different workflows for different needs, instead of one
+good one.
 
 [pyenv]: https://github.com/pyenv/pyenv
 [pyenvvenv]: https://github.com/pyenv/pyenv-virtualenvo
@@ -103,3 +164,5 @@ Notes about pipenv, what problems it solves, what it does not.
 [pep508merge]: https://github.com/pypa/pip/pull/5571
 [issue]: https://github.com/pypa/pip/issues/5898
 [pipenv]: https://github.com/pypa/pipenv
+[iterm]: https://www.iterm2.com/
+[poetry]: https://github.com/sdispater/poetry
