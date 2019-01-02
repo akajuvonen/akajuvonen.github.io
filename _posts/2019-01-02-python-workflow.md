@@ -149,7 +149,7 @@ fine and there are very few extra dependencies.
 
 I will keep experimenting with Pipenv, and probably try out other tools like
 [poetry][poetry], although it has its own issues. One thing I'm especially
-interested in is reliably dependency resolution, since I have had some
+interested in is reliable dependency resolution, since I have had some
 issues with that.
 
 It's obvious that Python packaging and dependency management are pain points.
