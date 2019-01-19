@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Notes about Python Workflow"
+title:  "Notes about Python Workflow and Dependency Management"
 ---
 
 I have been trying to find an optimal workflow for my work and personal needs.
