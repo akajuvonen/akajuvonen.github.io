@@ -15,6 +15,23 @@ one = lambda f: lambda x: f(x)
 two = lambda f: lambda x: f(f(x))
 ```
 
+Helper function:
+
+```python
+def to_digit(f):
+    def counter(x):
+        return x + 1
+    return f(counter)(0)
+```
+
+Resulting in
+```python
+to_digit(zero)
+0
+to_digit(one)
+1
+```
+
 SUCC := λn.λf.λx.f (n f x)
 
 ```python
