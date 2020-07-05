@@ -46,3 +46,11 @@ PLUS := λm.λn.m SUCC n -> untuitively applying successor function to `n`, doin
 ```python
 lambda m: lambda n: m(succ)(n)
 ```
+
+Once again, multiplication can be defined in a couple of ways, but here I'll just use `MULT := λm.λn.m (PLUS n) 0`, which just means adding `n`, doing it `m` times and applying that to zero.
+
+```python
+lambda m: lambda n: m(plus(n))(0)
+```
+
+TODO: PRED.
