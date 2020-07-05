@@ -38,3 +38,11 @@ SUCC := λn.λf.λx.f (n f x)
 succ = lambda n: lambda f: lambda x: f(n(f)(x))
 three = succ(two)
 ```
+
+Addition has more than one possible definition. To keep it simple, let's use `succ` defined above:
+
+PLUS := λm.λn.m SUCC n -> untuitively applying successor function to `n`, doing it `m` times. 
+
+```python
+lambda m: lambda n: m(succ)(n)
+```
