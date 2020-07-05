@@ -9,6 +9,8 @@ TODO: intro.
 - 1 := λf.λx.f x
 - 2 := λf.λx.f (f x)
 
+Python `lambda` vs Lambda Calculus. Similar, but not the same. Python lambda is a superset, since it can take more than one argument, e.g., `lambda x, y: x + y`.
+
 ```python
 zero = lambda f: lambda x: x
 one = lambda f: lambda x: f(x)
