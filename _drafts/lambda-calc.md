@@ -32,25 +32,35 @@ to_digit(one)
 1
 ```
 
-SUCC := λn.λf.λx.f (n f x)
+`SUCC := λn.λf.λx.f (n f x)`
 
 ```python
 succ = lambda n: lambda f: lambda x: f(n(f)(x))
 three = succ(two)
+to_digit(three)
+3
 ```
 
 Addition has more than one possible definition. To keep it simple, let's use `succ` defined above:
 
-PLUS := λm.λn.m SUCC n -> untuitively applying successor function to `n`, doing it `m` times. 
+`PLUS := λm.λn.m SUCC n` -> untuitively applying successor function to `n`, doing it `m` times. 
 
 ```python
 plus = lambda m: lambda n: m(succ)(n)
+result = plus(three)(two)
+to_digit(result)
+5
 ```
+
+NOTE: currying above.
 
 Once again, multiplication can be defined in a couple of ways, but here I'll just use `MULT := λm.λn.m (PLUS n) 0`, which just means adding `n`, doing it `m` times and applying that to zero.
 
 ```python
 mult = lambda m: lambda n: m(plus(n))(0)
+result = mult(2)(3)
+to_digit(result)
+6
 ```
 
 TODO: PRED.
