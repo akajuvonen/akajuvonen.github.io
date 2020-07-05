@@ -57,7 +57,7 @@ NOTE: currying above.
 Once again, multiplication can be defined in a couple of ways, but here I'll just use `MULT := λm.λn.m (PLUS n) 0`, which just means adding `n`, doing it `m` times and applying that to zero.
 
 ```python
-mult = lambda m: lambda n: m(plus(n))(0)
+mult = lambda m: lambda n: m(plus(n))(zero)
 result = mult(2)(3)
 to_digit(result)
 6
