@@ -67,4 +67,8 @@ to_digit(result)
 6
 ```
 
-TODO: PRED.
+Pred is more difficult: `PRED := λn.λf.λx.n (λg.λh.h (g f)) (λu.x) (λu.u)`. There are other definitions, but we need other things that we haven't defined yet.
+
+```python
+lambda n: lambda f: lambda x: n(lambda g: lambda h: h(g(f)))(lambda u: x)(lambda u: u)
+```
