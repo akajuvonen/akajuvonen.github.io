@@ -3,7 +3,9 @@ layout: post
 title:  "Calculations without Integers: Lambda Calculus and Church Numerals"
 ---
 
-TODO: intro.
+What is Lambda Calculus.
+
+Introduce Church numerals.
 
 - 0 := λf.λx.x
 - 1 := λf.λx.f x
