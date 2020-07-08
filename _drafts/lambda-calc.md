@@ -72,3 +72,9 @@ Pred is more difficult: `PRED := λn.λf.λx.n (λg.λh.h (g f)) (λu.x) (λu.u)
 ```python
 lambda n: lambda f: lambda x: n(lambda g: lambda h: h(g(f)))(lambda u: x)(lambda u: u)
 ```
+
+Logic.
+
+Pairs.
+
+Lists.
