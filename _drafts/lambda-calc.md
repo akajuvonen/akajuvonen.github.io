@@ -75,6 +75,15 @@ lambda n: lambda f: lambda x: n(lambda g: lambda h: h(g(f)))(lambda u: x)(lambda
 
 Logic.
 
+By convention, booleans are encoded as `TRUE := λx.λy.x` and `FALSE := λx.λy.y`.
+
+```python
+true = lambda x: lambda y: x
+false = lambda x: lambda y: y
+```
+
+Note that `false` is the same as `zero`, since we could also write it as `lambda f: lambda x: x` as before.
+
 Pairs.
 
 Lists.
