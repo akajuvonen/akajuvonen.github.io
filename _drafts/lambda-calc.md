@@ -7,13 +7,13 @@ Lambda calculus is an abstract theory of computation which includes only variabl
 
 A note on syntax: `λx.x` would be `lambda x: x` in Python, `λf.λx.f x` is `lambda f: lambda x: f(x)` and so on. Also, function applications are left associative, meaning `x y z` would be `x(y)(z)`.
 
-Back to numbers. Clearly we need some kind of way to encode numbers using only functions. Something has to represent a number, e.g., one or three. Since we have only functions and function applications at our disposal, one way to encode numbers is to use Church numerals. Think of it this way: when a function is applied to a variable one time, this could be interpreted as number one. Zero applications would be zero, two times equals two and so on.
+Back to numbers. Clearly we need some kind of way to encode numbers using only functions. Something has to represent a number, e.g., one or three. Since we have only functions and function applications at our disposal, one way to encode numbers is to interpret the number of times we apply a function as the value. Think of it this way: when a function is applied to a variable one time, this could be interpreted as number one. Zero applications would be zero, two times equals two and so on. The resulting numerals are called *Church numerals*. This choice of number encoding is technically arbitrary, but it allows us to perform calculation really nicely.
 
 - 0 := λf.λx.x
 - 1 := λf.λx.f x
 - 2 := λf.λx.f (f x)
 
-I will be using Python's lambda functions in this post. Keep in mind that usually giving a name to a lambda function is an anti-pattern, but I'll make an exception in this case for clarity. Python lambdas can be thought as a superset of actual lambda expressions in lambda calculus, since Python allows things like multiple arguments, e.g., `lambda x, y: x + y` which is not allowed.
+I will be using Python's lambda functions in this post. Keep in mind that usually giving a name to a lambda function is an anti-pattern, but I'll make an exception in this case for clarity. Python lambdas can be thought of as a superset of actual lambda expressions in lambda calculus, since Python allows things like multiple arguments, e.g., `lambda x, y: x + y` which is not allowed.
 
 Let's introduce an implementation on Church numerals, where the number of function applications equals the value:
 
@@ -23,7 +23,7 @@ one = lambda f: lambda x: f(x)
 two = lambda f: lambda x: f(f(x))
 ```
 
-As we will be doing some computations using these numerals, it would be nice to be able to decode a Church numeral into a digit, just to confirm that we are doing things correctly. I'll use this helper function for that:
+As we will be doing some computations using these numerals, it would be nice to be able to decode a Church numeral into digits, just to confirm that we are doing things correctly. I'll use this helper function for that:
 
 ```python
 def to_digit(f):
@@ -41,6 +41,8 @@ to_digit(one)
 1
 ```
 
+Now we can start implementing some useful functions that perform calculations using our numerals. Figuring these out by yourself is a challenge of its own, but in this post I'm more interested in implementing some of them and seeing them in action. Some are more intuitive than others.
+
 `SUCC := λn.λf.λx.f (n f x)`
 
 ```python
@@ -50,7 +52,7 @@ to_digit(three)
 3
 ```
 
-Addition has more than one possible definition. To keep it simple, let's use `succ` defined above:
+Addition has more than one possible definition. To keep it simple, let's use `succ` defined above.
 
 `PLUS := λm.λn.m SUCC n` -> untuitively applying successor function to `n`, doing it `m` times. 
 
