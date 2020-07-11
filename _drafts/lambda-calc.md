@@ -3,9 +3,7 @@ layout: post
 title:  "Calculations without Integers: Lambda Calculus and Church Numerals"
 ---
 
-What is Lambda Calculus.
-
-Introduce Church numerals.
+Lambda calculus is an abstract theory of computation which includes only variables, functions and function applications. Without going into too much detail, I became interested in it after realizing it introduces an interesting problem: how to perform calculations without numbers (e.g., integers) when all we have is functions? And how could this be implemented using some programming language? Let's try to do something in Python.
 
 - 0 := λf.λx.x
 - 1 := λf.λx.f x
