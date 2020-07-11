@@ -43,7 +43,7 @@ to_digit(one)
 
 Now we can start implementing some useful functions that perform calculations using our numerals. Figuring these out by yourself is a challenge of its own, but in this post I'm more interested in implementing some of them and seeing them in action. Some are more intuitive than others.
 
-`SUCC := λn.λf.λx.f (n f x)`
+Let's start with the successor function, which can be defined as `SUCC := λn.λf.λx.f (n f x)`. In this function the function `f` is applied to `x` `n` times (`n f x`). When we add one more function application (`f (n f x)`) we get the next number according to the definition of numbers we introduced above. In Python it would be this:
 
 ```python
 succ = lambda n: lambda f: lambda x: f(n(f)(x))
