@@ -63,7 +63,9 @@ to_digit(result)
 
 As mentioned before, functions in lambda calculus can only take one argument. Therefore, in the above example `plus(three)` returns a function that is then applied to `two` to get `five` (although the final result itself is another function, it just happens to be the one we have defined as number five).
 
-Once again, multiplication can be defined in a couple of ways, but here I'll just use `MULT := λm.λn.m (PLUS n) 0`, which just means adding `n`, doing it `m` times and applying that to zero.
+Once again, multiplication can be defined in a couple of ways, but here I'll just use , which just means adding `n`, doing it `m` times and applying that to zero.
+
+Once again, multiplication can be defined in more than one way. But staying consistent and using the functions we already defined, multiplication can be performed by performing addition by `n`, repeating that `m` times and applying it to `zero`, or `MULT := λm.λn.m (PLUS n) 0`.
 
 ```python
 mult = lambda m: lambda n: m(plus(n))(zero)
