@@ -52,9 +52,7 @@ to_digit(three)
 3
 ```
 
-Addition has more than one possible definition. To keep it simple, let's use `succ` defined above.
-
-`PLUS := λm.λn.m SUCC n` -> untuitively applying successor function to `n`, doing it `m` times. 
+Addition has more than one possible definition. To keep it simple, let's use `succ` defined above to our advantage. Since successor function gives us the next number, we could use it by applying it to a number several times to get the results we are looking for. In lambda calculus it would be `PLUS := λm.λn.m SUCC n`, which does what we just described. For example, `3 + 2` can be obtained by applying `succ` to `3` and doing it `2` times, resulting in `3 + 1 + 1 = 5` (or the other way round). 
 
 ```python
 plus = lambda m: lambda n: m(succ)(n)
@@ -63,7 +61,7 @@ to_digit(result)
 5
 ```
 
-NOTE: currying above.
+As mentioned before, functions in lambda calculus can only take one argument. Therefore, in the above example `plus(three)` returns a function that is then applied to `two` to get `five` (although the final result itself is another function, it just happens to be the one we have defined as number five).
 
 Once again, multiplication can be defined in a couple of ways, but here I'll just use `MULT := λm.λn.m (PLUS n) 0`, which just means adding `n`, doing it `m` times and applying that to zero.
 
