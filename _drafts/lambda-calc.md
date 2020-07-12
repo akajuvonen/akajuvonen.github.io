@@ -81,3 +81,5 @@ pred = lambda n: lambda f: lambda x: n(lambda g: lambda h: h(g(f)))(lambda u: x)
 to_digit(pred(three))
 2
 ```
+
+This is a really hard one to grasp, and I'm still in the process of doing so myself. Since numbers are, e.g., function `f` applied to `x` `n` times (this would be number `n`), `pred` returns `f` applied to `x` one fewer times than `n`. **How** exactly this is possible is more complicated, but suffice to say for now that it does work.
