@@ -69,7 +69,7 @@ Once again, multiplication can be defined in more than one way. But staying cons
 
 ```python
 mult = lambda m: lambda n: m(plus(n))(zero)
-result = mult(2)(3)
+result = mult(two)(three)
 to_digit(result)
 6
 ```
