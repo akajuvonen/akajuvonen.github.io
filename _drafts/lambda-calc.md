@@ -3,11 +3,11 @@ layout: post
 title:  "Calculations without Integers: Lambda Calculus and Church Numerals"
 ---
 
-Lambda calculus is an abstract theory of computation which includes only variables, functions and function applications. Without going into too much detail, I became interested in it after realizing it introduces an interesting problem: how to perform calculations without numbers (e.g., integers) when all we have is functions? And how could this be implemented using some programming language? Let's try to do something in Python.
+[Lambda calculus][1] is an abstract theory of computation which includes only variables, functions and function applications. Without going into too much detail, I became interested in it after realizing it introduces an interesting problem: how to perform calculations without numbers (e.g., integers) when all we have is functions? And how could this be implemented using some programming language? Let's try to do something in Python.
 
 A note on syntax: `λx.x` would be `lambda x: x` in Python, `λf.λx.f x` is `lambda f: lambda x: f(x)` and so on. Also, function applications are left associative, meaning `x y z` would be `x(y)(z)`.
 
-Back to numbers. Clearly we need some kind of way to encode numbers using only functions. Something has to represent a number, e.g., one or three. Since we have only functions and function applications at our disposal, one way to encode numbers is to interpret the number of times we apply a function as the value. Think of it this way: when a function is applied to a variable one time, this could be interpreted as number one. Zero applications would be zero, two times equals two and so on. The resulting numerals are called *Church numerals*. This choice of number encoding is technically arbitrary, but it allows us to perform calculation really nicely.
+Back to numbers. Clearly we need some kind of way to encode numbers using only functions. Something has to represent a number, e.g., one or three. Since we have only functions and function applications at our disposal, one way to encode numbers is to interpret the number of times we apply a function as the value. Think of it this way: when a function is applied to a variable one time, this could be interpreted as number one. Zero applications would be zero, two times equals two and so on. The resulting numerals are called [Church numerals][2]. This choice of number encoding is technically arbitrary, but it allows us to perform calculation really nicely.
 
 - 0 := λf.λx.x
 - 1 := λf.λx.f x
@@ -87,3 +87,6 @@ This is a really hard one to grasp, and I'm still in the process of doing so mys
 There's something to get started with. There are other types of data that can be encoded using only functions (e.g, booleans, pairs or lists) and it's all quite clever. Lambda calculus offers cool programming challenges and brain twisters, although it's historical and theoretical significance is much bigger than that. Also, I'm a fan of minimalism and trying to get things done with less. That kind of thinking might sometimes have actual practical applications in the real world.
 
 Let this be enough for now, and I'll probably add more about lambda calculus later.
+
+[1]: https://en.wikipedia.org/wiki/Lambda_calculus
+[2]: https://en.wikipedia.org/wiki/Church_encoding#Church_numerals
