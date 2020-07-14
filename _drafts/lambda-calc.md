@@ -13,7 +13,7 @@ Back to numbers. Clearly we need some kind of way to encode numbers using only f
 - 1 := λf.λx.f x
 - 2 := λf.λx.f (f x)
 
-I will be using Python's lambda functions in this post. Keep in mind that usually giving a name to a lambda function is an anti-pattern, but I'll make an exception in this case for clarity. Python lambdas can be thought of as a superset of actual lambda expressions in lambda calculus, since Python allows things like multiple arguments, e.g., `lambda x, y: x + y` which is not allowed.
+I will be using Python's lambda functions in this post. Keep in mind that usually giving naming lambda functions (e.g., `function_name = lambda x: x + 1`) is an anti-pattern since lambda functions in Python are only supposed to be functions without a name, but I'll make an exception in this case for clarity. Python lambdas can also be thought of as a superset of actual lambda expressions in lambda calculus, since Python allows things like multiple arguments, e.g., `lambda x, y: x + y` which is not allowed.
 
 Let's introduce an implementation on Church numerals, where the number of function applications equals the value:
 
