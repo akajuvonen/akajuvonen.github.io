@@ -6,14 +6,9 @@ permalink: /about/
 
 # Antti Juvonen
 
-Hi, I'm Antti, a Data Scientist from Finland currently living in Tokyo, Japan. I'm working as a
-Machine Learning Engineer @ [Cogent Labs].
-I got a PhD in IT and co-founded [CAP Data Technologies]. I have 7+ years of experience in Machine Learning and
-software engineering.
+Hi, I'm Antti. I'm from Finland but currently living in Tokyo, Japan. I'm working as Senior Machine Learning Engineer @ [Cogent Labs]. I got a PhD in IT and co-founded [CAP Data Technologies]. I'm a Software Engineer at heart, and in addition to programming I have been researching or applying Machine Learning since around 2011.
 
-My interests include programming (mostly Python), Machine Learning, AI, Big Data and technology.
-I'm also a big fan of presenting complicated concepts in a simple way and will
-write about my observations in the blog.
+My interests include programming (mostly Python), Machine Learning, AI, Big Data and technology. I'm also a big fan of presenting complicated concepts in a simple way and will write about my (personal) observations in the blog.
 
 # Links
 - [GitHub]
