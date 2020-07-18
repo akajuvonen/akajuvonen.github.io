@@ -82,7 +82,7 @@ to_digit(pred(three))
 2
 ```
 
-This is a really hard one to grasp, and I'm still in the process of doing so myself. Since numbers are, e.g., function `f` applied to `x` `n` times (this would be number `n`), `pred` returns `f` applied to `x` one fewer times than `n`. **How** exactly this is possible is more complicated, but suffice to say for now that it does work.
+This is a really hard one to grasp, and I'm still in the process of doing so myself. Since numbers are, e.g., function `f` applied to `x` `n` times (this would be number `n`), `pred` returns `f` applied to `x` one fewer times than `n`. **How** exactly this is possible is more complicated, but suffice to say for now that it does work. Wikipedia has some more info on the [derivation][3].
 
 There's something to get started with. There are other types of data that can be encoded using only functions (e.g, booleans, pairs or lists) and it's all quite clever. Lambda calculus offers cool programming challenges and brain twisters, although it's historical and theoretical significance is much bigger than that. Also, I'm a fan of minimalism and trying to get things done with less. That kind of thinking might sometimes have actual practical applications in the real world.
 
@@ -90,3 +90,4 @@ Let this be enough for now, and I'll probably add more about lambda calculus lat
 
 [1]: https://en.wikipedia.org/wiki/Lambda_calculus
 [2]: https://en.wikipedia.org/wiki/Church_encoding#Church_numerals
+[3]: https://en.wikipedia.org/wiki/Church_encoding#Derivation_of_predecessor_function
