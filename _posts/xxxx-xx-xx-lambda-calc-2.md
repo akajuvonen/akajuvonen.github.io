@@ -31,7 +31,7 @@ to_digit(result)
 1
 
 result = if_then_else(is_zero(three))(one)(two)  # return two since one is not zero
-to_digit_result(result)
+to_digit(result)
 2
 ```
 
