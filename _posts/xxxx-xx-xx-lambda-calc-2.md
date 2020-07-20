@@ -37,4 +37,20 @@ to_digit(result)
 
 Cool. Check the link above for more things, like `and`, `or` and `xor`.
 
+# Pairs
+
+A pair is a datatype that allows us to access either the first of the second element. A pair is defined as `PAIR := λx.λy.λf.f x y`. We can use Church booleans to easily define the functions `FIRST := λp.p TRUE` and second `SECOND := λp.p FALSE`.
+
+```python
+pair = lambda x: lambda y: lambda f: f(x)(y)
+first = lambda p: p(true)
+second lambda p: p(false)
+
+p = pair(one)(two)
+to_digit(first(p))
+1
+to_digit(second(p))
+2
+```
+
 [1]: https://en.wikipedia.org/wiki/Church_encoding#Church_Booleans
