@@ -44,7 +44,7 @@ A pair is a datatype that allows us to access either the first of the second ele
 ```python
 pair = lambda x: lambda y: lambda f: f(x)(y)
 first = lambda p: p(true)
-second lambda p: p(false)
+second = lambda p: p(false)
 
 p = pair(one)(two)
 to_digit(first(p))
