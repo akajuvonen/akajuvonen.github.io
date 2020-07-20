@@ -53,4 +53,15 @@ to_digit(second(p))
 2
 ```
 
+## Factorial using pairs
+
+TODO: increases first element of pair, counts the factorial on second.
+```python
+next_ = lambda p: pair(succ(first(p)))(mult(first(p))(second(p)))
+```
+
+Note: the above does not quite work. Multiplication become zero in the beginning. But close.
+
+Repeat this `n` times to get `fact(n)`.
+
 [1]: https://en.wikipedia.org/wiki/Church_encoding#Church_Booleans
