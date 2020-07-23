@@ -3,7 +3,9 @@ layout: post
 title:  "Calculations without Integers: Lambda Calculus and Church Numerals"
 ---
 
-[Lambda calculus][1] is an abstract theory of computation which includes only variables, functions and function applications. Without going into too much detail, I became interested in it after realizing it introduces an interesting problem: how to perform calculations without numbers (e.g., integers) when all we have is functions? And how could this be implemented using some programming language? Let's try to do something in Python.
+This is the first post by me about lambda calculus. The next post can be found [here](2020-07-23-lambda-calc-2). I intend to start with more practical examples and delve deeper later on since I always like to start with something tangible.
+
+[Lambda calculus][1] is an abstract theory of computation which includes only variables, functions and function applications. Without going into too much detail (for now), I became interested in it after realizing it introduces an interesting problem: how to perform calculations without numbers (e.g., integers) when all we have is functions? And how could this be implemented using some programming language? Let's try to do something in Python.
 
 A note on syntax: `λx.x` would be `lambda x: x` in Python, `λf.λx.f x` is `lambda f: lambda x: f(x)` and so on. Also, function applications are left associative, meaning `x y z` would be `x(y)(z)`.
 
@@ -82,7 +84,7 @@ to_digit(pred(three))
 2
 ```
 
-This is a really hard one to grasp, and I'm still in the process of doing so myself. Since numbers are, e.g., function `f` applied to `x` `n` times (this would be number `n`), `pred` returns `f` applied to `x` one fewer times than `n`. **How** exactly this is possible is more complicated, but suffice to say for now that it does work.
+This is a really hard one to grasp, and I'm still in the process of doing so myself. Since numbers are, e.g., function `f` applied to `x` `n` times (this would be number `n`), `pred` returns `f` applied to `x` one fewer times than `n`. **How** exactly this is possible is more complicated, but suffice to say for now that it does work. Wikipedia has some more info on the [derivation][3].
 
 There's something to get started with. There are other types of data that can be encoded using only functions (e.g, booleans, pairs or lists) and it's all quite clever. Lambda calculus offers cool programming challenges and brain twisters, although it's historical and theoretical significance is much bigger than that. Also, I'm a fan of minimalism and trying to get things done with less. That kind of thinking might sometimes have actual practical applications in the real world.
 
@@ -90,3 +92,4 @@ Let this be enough for now, and I'll probably add more about lambda calculus lat
 
 [1]: https://en.wikipedia.org/wiki/Lambda_calculus
 [2]: https://en.wikipedia.org/wiki/Church_encoding#Church_numerals
+[3]: https://en.wikipedia.org/wiki/Church_encoding#Derivation_of_predecessor_function
