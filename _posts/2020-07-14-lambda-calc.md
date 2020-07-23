@@ -3,7 +3,7 @@ layout: post
 title:  "Calculations without Integers: Lambda Calculus and Church Numerals"
 ---
 
-This is the first post by me about lambda calculus. The next post can be found [here](2020-07-23-lambda-calc-2). I intend to start with more practical examples and delve deeper later on since I always like to start with something tangible.
+This is the first post by me about lambda calculus. The next post can be found [here][4]. I intend to start with more practical examples and delve deeper later on since I always like to start with something tangible.
 
 [Lambda calculus][1] is an abstract theory of computation which includes only variables, functions and function applications. Without going into too much detail (for now), I became interested in it after realizing it introduces an interesting problem: how to perform calculations without numbers (e.g., integers) when all we have is functions? And how could this be implemented using some programming language? Let's try to do something in Python.
 
@@ -93,3 +93,4 @@ Let this be enough for now, and I'll probably add more about lambda calculus lat
 [1]: https://en.wikipedia.org/wiki/Lambda_calculus
 [2]: https://en.wikipedia.org/wiki/Church_encoding#Church_numerals
 [3]: https://en.wikipedia.org/wiki/Church_encoding#Derivation_of_predecessor_function
+[4]: https://akajuvonen.github.io/2020/07/23/lambda-calc-2.html

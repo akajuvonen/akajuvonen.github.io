@@ -3,7 +3,7 @@ layout: post
 title:  "Lambda Calculus: Beyond Integers"
 ---
 
-I wrote about lambda calculus and how to encode integers using only function with Church numerals in a [previous post](2020-07-14-lambda-calc.md). This time I would like to take look at how to encode other datatypes within the same restrictions, namely booleans and pairs. I will be reusing some of the things introduced previously, so check that post if you haven't already.
+I wrote about lambda calculus and how to encode integers using only function with Church numerals in a [previous post][2]. This time I would like to take look at how to encode other datatypes within the same restrictions, namely booleans and pairs. I will be reusing some of the things introduced previously, so check that post if you haven't already.
 
 # Booleans
 
@@ -125,3 +125,4 @@ And there it is! In fact, untyped lambda calculus is Turing-complete, meaning we
 Still, it is often said that functional programming languages are based on lambda calculus, and due to its simple semantics I found it useful in helping me understand functional programming better.
 
 [1]: https://en.wikipedia.org/wiki/Church_encoding#Church_Booleans
+[2]: https://akajuvonen.github.io/2020/07/14/lambda-calc.html
