@@ -69,18 +69,57 @@ first | second
   4   |  24   # 2nd element 6*4
 ```
 
-What we can see immediately is that the first element of the pair is just incremented by one each time, and the second element is `first element of this pair * second element of previous pair`. First, we can define a function that takes one pair and returns the next. In Python this would normally be something like:
+What we can see immediately is that the first element of the pair is just incremented by one each time, and the second element is `first element of this pair * second element of previous pair`. First, we can define a function that takes one pair and returns the next. In Python this would normally be something like (using tuples):
 
 ```python
 def next_pair(pair: Tuple[int, int]) -> Tuple[int, int]:
     first, second = pair
-    return (first + 1, second * (first + 1))
+    return (first + 1, (first + 1) * second)
 ```
+
+Lambda calculus version is exactly the same:
 
 ```python
 next_pair = lambda p: pair(succ(first(p)))(mult(succ(first(p)))(second(p)))
+
+result = next_pair(pair(zero)(one))
+to_digit(first(result))
+1
+to_digit(second(result))
+1
+
+result = next_pair(pair(one)(one))
+to_digit(first(result))
+2
+to_digit(second(result))
+2
+
+result = next_pair(pair(two)(two))
+to_digit(first(result))
+3
+to_digit(second(result))
+6
+# and so on...
 ```
 
-Repeat this `n` times to get `fact(n)`.
+At this point we have basically solved the problem. All we need to now is to repeat this step `n` times and return the second element of the pair. That is our factorial. In this case `n(next_pair)` is a function that executes `next_pair` `n` times. If we apply this to our base case of `pair(zero)(one)`, we get what we want (returning just the second element):
+
+```python
+fact = lambda n: second(n(next_pair)(pair(zero)(one)))
+four = succ(three)  # I think we did not yet define number four, let's do it now
+
+to_digit(fact(zero))
+1
+to_digit(fact(one))
+1
+to_digit(fact(two))
+2
+to_digit(fact(three))
+6
+to_digit(fact(four))
+24
+```
+
+And there it is! In fact, untyped lambda calculus is Turing-complete, meaning we could theoretically solve any computational problem using only it. Of course it's more complicated in practice, and solving practical programming tasks using only lambda calculus will become impractical very quickly.
 
 [1]: https://en.wikipedia.org/wiki/Church_encoding#Church_Booleans
