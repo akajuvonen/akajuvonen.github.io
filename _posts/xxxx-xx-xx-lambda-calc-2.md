@@ -55,12 +55,31 @@ to_digit(second(p))
 
 ## Factorial using pairs
 
-TODO: increases first element of pair, counts the factorial on second.
-```python
-next_ = lambda p: pair(succ(first(p)))(mult(first(p))(second(p)))
+I've been listing a bunch of functions, and I think it's time we do some actual problem solving using what we have defined. Maybe we could try to calculate factorial. We haven't yet defined anything that allows us to use recursion, but we can come up with an iterative solution using pairs.
+
+Let's take a look at an example. For example, let's define a pair so that the first element is `n` and the second `factorial(n)`. Going through a few iterations, it would like this:
+
+```
+first | second
+------+-------
+  0   |   1
+  1   |   1
+  2   |   2   # 2nd element is 1*2
+  3   |   6   # 2nd element 2*3
+  4   |  24   # 2nd element 6*4
 ```
 
-Note: the above does not quite work. Multiplication become zero in the beginning. But close.
+What we can see immediately is that the first element of the pair is just incremented by one each time, and the second element is `first element of this pair * second element of previous pair`. First, we can define a function that takes one pair and returns the next. In Python this would normally be something like:
+
+```python
+def next_pair(pair: Tuple[int, int]) -> Tuple[int, int]:
+    first, second = pair
+    return (first + 1, second * (first + 1))
+```
+
+```python
+next_pair = lambda p: pair(succ(first(p)))(mult(succ(first(p)))(second(p)))
+```
 
 Repeat this `n` times to get `fact(n)`.
 
